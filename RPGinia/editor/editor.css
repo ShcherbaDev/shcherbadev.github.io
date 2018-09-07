@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+#app > .editor {
+  display: grid;
+  height: calc(100% - 46.38px);
+  grid-template-columns: 0.3fr 0.4fr 1fr;
+  grid-template-areas: "Layers Properties Result";
+}
+
+.section-title {
+  background-color: #555;
+  color: #fff;
+  padding: 5px 10px;
+  margin-bottom: 0;
+}
+
+.section-content {
+  padding: 10px;
+}
+
+/* Menu */
+.menu > .navbar {
+  padding: .2rem 1rem;
+}
+
+.menu .project-name {
+  color: #fff;
+  border-right: 1px solid #555;
+  display: inline-block;
+  padding-bottom: .3125rem;
+  padding-right: 20px;
+  font-size: 1.20rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.menu .navbar-collapse {
+  padding-left: 10px;
+}
+
+/* Layer manager */
+#app > .editor > .layers {
+  grid-area: Layers;
+}
+
+/* Object list & Object's properties */
+#app > .editor > .properties {
+  grid-area: Properties;
+}
+
+/* Object result */
+#app > .editor > .result {
+  grid-area: Result;
+}
+
+.result > .canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.result > .canvas-container > canvas {
+  border: 1px dashed #000;
+}

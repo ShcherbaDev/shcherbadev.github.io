@@ -1,12 +1,232 @@
-<style>
-	* {
-		margin: 0;
-		padding: 0;
-	}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>RPGinia room editor</title>
 
-	iframe {
-		width: 100%;
-		height: 100%;
-	}
-</style>
-<iframe src="https://github.com/ShcherbaDev/RPGinia/tree/dev/editor/index.html" frameborder="0"></iframe>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="./editor.css">
+</head>
+<body>
+	<div id="app">
+		<!-- Menu -->
+		<!-- <div class="top menu">
+			<div class="room-name">
+				<span class="room-name" v-if="roomData.name">{{roomData.name}}</span>
+				<span class="room-name" v-else>Unnamed room</span>
+			</div>
+
+			<div class="navigation">
+				<ul>
+					<li>
+						<a href="#">File</a>
+						<div class="dropdown">
+							<div class="dropdown-content">
+								<ul>
+									<li>
+										<a href="#">New room</a>
+									</li>
+									<li>
+										<a href="#">Open room</a>
+									</li>
+									<li>
+										<a href="#">Save</a>
+									</li>
+									<li>
+										<a href="#">Save as...</a>
+									</li>
+									<li>
+										<a href="#">Room settings</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="https://shcherbadev.github.com/RPGinia" target="_blank">Help</a>
+					</li>
+				</ul>
+			</div>
+		</div> -->
+
+		<div class="menu">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<span class="project-name" v-if="roomData.name">{{roomData.name}}</span>
+				<span class="project-name" v-else>Unnamed project</span>
+
+				<div class="collapse navbar-collapse" id="editorMenu">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="fileActions" data-toggle="dropdown">
+								File
+							</a>
+							<div class="dropdown-menu" aria-labelledby="fileActions">
+								<a class="dropdown-item" href="#">New project</a>
+								<a class="dropdown-item" href="#">Open project</a>
+								<a class="dropdown-item" href="#">Save</a>
+								<a class="dropdown-item" href="#">Save as...</a>
+								<a class="dropdown-item" href="#">Project settings</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://shcherbadev.github.io/RPGinia" target="_blank">Help</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<!-- Menu end -->
+		
+		<!-- Editor -->
+
+		<div class="editor">
+			<div class="editor-section layers" style="background-color: red">
+				<p class="section-title">Layers</p>
+				<div class="section-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati recusandae magnam, fugit veritatis dolorem, ullam. Esse libero reiciendis autem accusamus magnam quos consequuntur vero facilis quod mollitia, perferendis nobis deserunt!</p>
+				</div>
+			</div>
+			<div class="editor-section properties" style="background-color: green">
+				<div class="objects">
+					<p class="section-title">Object list</p>
+					<div class="section-content">
+						<div class="obj-list-container" v-if="objects.length">
+							<ul class="obj-list">
+								<object-item 
+									v-for="object in objects"
+									v-bind:key="object.id"
+									v-bind:object="object"></object-list>
+							</ul>
+							<p>Total objects: {{objects.length}}</p>
+						</div>
+						<p v-else>Object list is empty!<br/>Press <b>+</b> to add a new object.</p>
+					</div>
+				</div>
+
+				<div class="object-properties">
+					<p class="section-title">Properties</p>
+					<div class="section-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis, quidem corrupti ipsam quas maxime? Totam nostrum ab voluptatem minima, temporibus, quaerat tempora ad fuga, alias non, eum ipsam nemo.</p>
+					</div>
+				</div>
+			</div>
+			<div class="editor-section result" style="background-color: blue">
+				<p class="section-title">Result</p>
+				<div class="canvas-container">
+					<canvas id="editor"></canvas>
+				</div>
+			</div>
+		</div>
+
+		<!-- Layer manager -->
+		<!-- <div class="left layers">
+			<p>Layers</p>
+		</div> -->
+		<!-- Layer manager end -->
+
+		<!-- Add new object and object propertires -->
+		<!-- <div class="center properties">
+			<div class="objects">
+				<h1>Object list</h1>
+				
+				<div class="obj-list-container" v-if="objects.length">
+					<ul class="obj-list">
+						<object-item 
+							v-for="object in objects"
+							v-bind:key="object.id"
+							v-bind:object="object"></object-list>
+					</ul>
+					<p>Total objects: {{objects.length}}</p>
+				</div>
+				<p v-else>Object list is empty!<br/>Press <b>+</b> to add a new object.</p>
+
+				<button id="show-modal" @click="addObjModal = true">+</button>
+			</div>
+
+			<div class="properties">Object properties</div>
+		</div> -->
+		<!-- Add new object and object propertires end -->
+
+		<!-- Result -->
+		<!-- <div class="right result">
+			<div class="canvas-container">
+				<canvas id="editor"></canvas>
+			</div>
+		</div> -->
+		<!-- Result end -->
+
+		<!-- Adding a new object modal (Maybe i'll delete it) -->
+		<!-- <modal v-if="addObjModal" title="Add new object">
+			<div slot="content">
+				<div class="form">
+					<div class="input type">
+						<label for="type">Type:</label>
+						<select id="type" v-model="addObjectForm.typeSelect" required>
+							<option value="rectangle">Rectangle</option>
+							<option value="image" disabled="disabled">Sprite</option>
+							<option value="trigget" disabled="disabled">Trigger</option>
+						</select>
+						<small v-if="addObjectForm.typeSelect">You typed: {{addObjectForm.typeSelect}}</small>
+					</div>
+					<div class="input fill" v-if="addObjectForm.typeSelect === 'rectangle'">
+						<label for="fill">Fill:</label>
+						<input id="fill" type="color"  v-model="addObjectForm.fill" required>
+						<small v-if="addObjectForm.fill">You typed: {{addObjectForm.fill}}</small>
+					</div>
+					<div class="input layer" v-if="addObjectForm.typeSelect">
+						<label for="layer">Layer:</label>
+						<input id="layer" type="number" v-model="addObjectForm.layer" required>
+						<small v-if="addObjectForm.layer">You typed: {{addObjectForm.layer}}</small>
+					</div>
+					<div class="input x" v-if="addObjectForm.typeSelect">
+						<label for="x">X coordinate:</label>
+						<input id="x" type="number" v-model="addObjectForm.x" required>
+						<small v-if="addObjectForm.x">You typed: {{addObjectForm.x}}</small>
+					</div>
+					<div class="input y" v-if="addObjectForm.typeSelect">
+						<label for="y">Y coordinate:</label>
+						<input id="y" type="number" v-model="addObjectForm.y" required>
+						<small v-if="addObjectForm.y">You typed: {{addObjectForm.y}}</small>
+					</div>
+					<div class="input width" v-if="addObjectForm.typeSelect">
+						<label for="width">Width:</label>
+						<input id="width" type="number" v-model="addObjectForm.width" required>
+						<small v-if="addObjectForm.width">You typed: {{addObjectForm.width}}</small>
+					</div>
+					<div class="input height" v-if="addObjectForm.typeSelect">
+						<label for="height">Height:</label>
+						<input id="height" type="number" v-model="addObjectForm.height" required>
+						<small v-if="addObjectForm.height">You typed: {{addObjectForm.height}}</small>
+					</div>
+				</div>
+			</div>
+			<div slot="footer">
+				<div class="addObj" v-if="addObjectForm.typeSelect && addObjectForm.x && addObjectForm.y && addObjectForm.width && addObjectForm.height">
+					<button class="modal-default-button" @click="addObj">
+						Add
+					</button>
+				</div>
+				<div class="addObj" v-else>
+					<button class="modal-default-button" disabled="disabled">
+						Add
+					</button>
+				</div>
+			</div>
+		</modal> -->
+		<!-- Adding a new object modal end -->
+
+		<!-- Editor end -->
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<!-- Vue.js -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+	<!-- Editor -->
+	<script src="./editor.js"></script>
+</body>
+</html>
