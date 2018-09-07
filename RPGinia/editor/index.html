@@ -1,104 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>RPGinia map editor</title>
-	<link rel="stylesheet" href="editor.css">
-</head>
-<body>
-	<div id="app">
-		<div class="left layers">
-			<p>Layers</p>
-		</div>
-		<div class="center objects">
-			<div class="objects">
-				<h1>Object list</h1>
-				
-				<div class="obj-list-container" v-if="objects.length">
-					<ul class="obj-list">
-						<object-item 
-							v-for="object in objects"
-							v-bind:key="object.id"
-							v-bind:object="object"></object-list>
-					</ul>
-					<p>Total objects: {{objects.length}}</p>
-				</div>
-				<p v-else>Object list is empty!<br/>Press <b>add</b> to add a new object.</p>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
 
-				<button id="show-modal" @click="showModal = true">Add</button>
-			</div>
-
-			<div class="properties">Object properties</div>
-		</div>
-		<div class="right result">
-			<div class="canvas-container">
-				<canvas id="editor"></canvas>
-			</div>
-		</div>
-
-		<modal v-if="showModal" title="Add new object">
-			<div slot="content">
-				<div class="form">
-					<div class="input type">
-						<label for="type">Type:</label>
-						<select id="type" v-model="addObjectForm.typeSelect" required>
-							<option value="rectangle">Rectangle</option>
-							<option value="image" disabled="disabled">Sprite</option>
-							<option value="trigget" disabled="disabled">Trigger</option>
-						</select>
-						<small v-if="addObjectForm.typeSelect">You typed: {{addObjectForm.typeSelect}}</small>
-					</div>
-					<div class="input fill" v-if="addObjectForm.typeSelect === 'rectangle'">
-						<label for="fill">Fill:</label>
-						<input id="fill" type="color"  v-model="addObjectForm.fill" required>
-						<small v-if="addObjectForm.fill">You typed: {{addObjectForm.fill}}</small>
-					</div>
-					<div class="input layer" v-if="addObjectForm.typeSelect">
-						<label for="layer">Layer:</label>
-						<input id="layer" type="number" v-model="addObjectForm.layer" required>
-						<small v-if="addObjectForm.layer">You typed: {{addObjectForm.layer}}</small>
-					</div>
-					<div class="input x" v-if="addObjectForm.typeSelect">
-						<label for="x">X coordinate:</label>
-						<input id="x" type="number" v-model="addObjectForm.x" required>
-						<small v-if="addObjectForm.x">You typed: {{addObjectForm.x}}</small>
-					</div>
-					<div class="input y" v-if="addObjectForm.typeSelect">
-						<label for="y">Y coordinate:</label>
-						<input id="y" type="number" v-model="addObjectForm.y" required>
-						<small v-if="addObjectForm.y">You typed: {{addObjectForm.y}}</small>
-					</div>
-					<div class="input width" v-if="addObjectForm.typeSelect">
-						<label for="width">Width:</label>
-						<input id="width" type="number" v-model="addObjectForm.width" required>
-						<small v-if="addObjectForm.width">You typed: {{addObjectForm.width}}</small>
-					</div>
-					<div class="input height" v-if="addObjectForm.typeSelect">
-						<label for="height">Height:</label>
-						<input id="height" type="number" v-model="addObjectForm.height" required>
-						<small v-if="addObjectForm.height">You typed: {{addObjectForm.height}}</small>
-					</div>
-				</div>
-			</div>
-			<div slot="footer">
-				<div class="addObj" v-if="addObjectForm.typeSelect && addObjectForm.x && addObjectForm.y && addObjectForm.width && addObjectForm.height">
-					<button class="modal-default-button" @click="addObj">
-						Add
-					</button>
-				</div>
-				<div class="addObj" v-else>
-					<button class="modal-default-button" disabled="disabled">
-						Add
-					</button>
-				</div>
-			</div>
-		</modal>
-	</div>
-	
-	<!-- Vue.js -->
-	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-	<!-- Editor -->
-	<script src="editor.js"></script>
-</body>
-</html>
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<iframe src="https://github.com/ShcherbaDev/RPGinia/editor/index.html" frameborder="0"></iframe>
