@@ -1,89 +1,355 @@
 * {
-  margin: 0;
-  padding: 0;
-}
-
-html, body, #app {
-  height: 100%;
-}
-
-body {
-  overflow: hidden;
-}
-
-.dropdown:hover > .dropdown-menu {
-  display: block;
-}
-
-.dropdown-toggle::after {
-  content: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 #app {
-  display: flex;
-  flex-direction: column;
+    height: 100vh;
 }
 
+body {
+    overflow: auto;
+    background-color: #333;
+}
+
+/*
+    Custom scrollbar
+*/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*
+    Custom styles
+*/
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+/*
+    Cards
+*/
+
+/* Main settings */
+.card-container {
+    display: flex;
+    max-width: 50%;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+}
+
+.card .container-fluid > .row > div {
+    padding: 0;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.card {
+    border: 1px #666;
+    box-shadow: 0 0 20px 0 #222;
+    border-radius: 5px;
+}
+
+.card > .card-header {
+    background-color: #444;
+    border-bottom: 1px solid #555;
+    color: #eee;
+}
+
+.card > .card-body {
+    background-color: #333;
+}
+
+.card > .card-footer {
+    background-color: #444;
+    border-top: 1px solid #555;
+    color: #888;
+}
+
+.card > .card-footer a {
+    color: #888;
+}
+/*
+    Start card
+*/
+.card.card-start {
+    width: 60%;
+}
+
+.card.card-start > .card-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.card.card-start > .card-header > .title {
+    font-size: 2.3em;
+    margin-bottom: 0;
+}
+
+.card.card-start > .card-header > .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.card.card-start > .card-header > .title,
+.card.card-start > .card-header > .subtitle {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.card.card-start > .card-body .list-group-item.open-file-btn {
+    padding: 0;
+}
+
+.card.card-start > .card-body .list-group-item {
+    text-align: center;
+    color: #fff;
+    border-radius: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+}
+
+.card.card-start > .card-body .list-group-item:hover {
+    background-color: #444;
+}
+
+.card.card-start > .card-body .list-group-item i.far,
+.card.card-start > .card-body .list-group-item i.fas {
+    margin-right: 10px;
+}
+
+.card.card-start > .card-body .list-group-item:nth-child(even) {
+    border-top: 1px solid #444;
+}
+
+.card.card-start > .card-body .list-group-item.open-file-btn label {
+    width: 100%;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding: .75rem 1.25rem;
+}
+
+.card.card-start > .card-body input[type='file'] {
+    display: none;
+}
+
+.card.card-start > .card-footer a {
+    text-decoration: none;
+}
+
+.card.card-start > .card-footer a:hover {
+    color: #aaa;
+}
+
+/*
+    Card project settings
+*/
+.card.card-settings {
+    width: 90%;
+}
+
+.card.card-settings > .card-header > .title {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.card.card-settings > .card-body {
+    color: #fff;
+}
+
+.card.card-settings > .card-body .form-control {
+    background-color: #444;
+    border-color: #555;
+}
+
+.card.card-settings > .card-body .form-control[type="text"]::placeholder,
+.card.card-settings > .card-body .selectedFile {
+    color: #aaa;
+}
+
+.card.card-settings > .card-body .form-control[type="text"] {
+    color: #ccc;
+}
+
+.card.card-settings > .card-body .selectFile > .form-control {
+    position: relative;
+} 
+
+.card.card-settings > .card-body .selectFile button.selectFileBtn {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    border-radius: 0 .25rem .25rem 0;
+    background-color: #555;
+    border: 0;
+    color: #fff;
+}
+
+.card.card-settings > .card-body .selectFile input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    outline: 0;
+}
+
+.card.card-settings > .card-body input[type="color"] {
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.card.card-settings > .card-footer {
+    text-align: right;
+}
+
+/*
+    Editor
+*/
 #app > .editor {
-  display: grid;
-  height: calc(100% - 46.38px);
-  grid-template-columns: 0.3fr 0.4fr 1fr;
-  grid-template-areas: "Layers Properties Result";
+    display: grid;
+    height: 100vh;
+    grid-template-columns: .3fr .5fr 1fr;
+    grid-template-areas: 'Menu Menu Menu' 'Layers Objects Result';
+}
+
+.editor > div:not(.editor__menu):not(.editor__objects) > div {
+    overflow: auto;
+    max-height: calc(100vh - 46.38px - 34px);
 }
 
 .section-title {
-  background-color: #555;
-  color: #fff;
-  padding: 5px 10px;
-  margin-bottom: 0;
+    display: flex;
+    margin-bottom: 0;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #555;
 }
 
 .section-content {
-  padding: 10px;
+    padding: 10px;
 }
 
 /* Menu */
-.menu > .navbar {
-  padding: .2rem 1rem;
+.editor__menu {
+    grid-area: Menu;
 }
 
-.menu .project-name {
-  color: #fff;
-  border-right: 1px solid #555;
-  display: inline-block;
-  padding-bottom: .3125rem;
-  padding-right: 20px;
-  font-size: 1.20rem;
-  line-height: inherit;
-  white-space: nowrap;
+.editor__menu > .navbar {
+    padding: .2rem 1rem;
 }
 
-.menu .navbar-collapse {
-  padding-left: 10px;
+.editor__menu .project-name {
+    font-size: 1.20rem;
+    line-height: inherit;
+    display: inline-block;
+    padding-right: 20px;
+    padding-bottom: .3125rem;
+    white-space: nowrap;
+    color: #fff;
+    border-right: 1px solid #555;
+}
+
+.editor__menu .navbar-collapse {
+    padding-left: 10px;
 }
 
 /* Layer manager */
-#app > .editor > .layers {
-  grid-area: Layers;
+.editor__layers {
+    grid-area: Layers;
 }
 
-/* Object list & Object's properties */
-#app > .editor > .properties {
-  grid-area: Properties;
+/* Object list & properties */
+.editor > .editor__objects {
+    display: grid;
+    grid-area: Objects;
+    grid-template-areas: 'List' 'Properties';
+    grid-template-rows: .4fr 1fr;
 }
 
-/* Object result */
-#app > .editor > .result {
-  grid-area: Result;
+.editor__objects .section-title > .controls button {
+    padding: 0 5px;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
 }
 
-.result > .canvas-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.editor__objects .section-title > .controls button.add {
+    color: limegreen;
 }
 
-.result > .canvas-container > canvas {
-  border: 1px dashed #000;
+.editor__objects .section-title > .controls button.delete {
+    color: red;
+}
+
+.editor__objects > .object-list {
+    overflow: hidden;
+    height: 300px;
+}
+
+.editor__objects > .object-list > .section-content {
+    overflow: auto;
+    min-height: 100px;
+    max-height: calc(300px - 34px);
+}
+
+.editor__objects > .object-properties {
+    overflow: hidden;
+    height: calc(100vh - 46.38px - 300px);
+}
+
+.editor__objects > .object-properties > .section-content {
+    overflow: auto;
+    max-height: calc(100vh - 46.38px - 300px - 34px);
+}
+
+/* Result */
+.editor__result {
+    grid-area: Result;
+}
+
+.editor__result > .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editor__result canvas {
+    border: 1px dashed #000;
 }
