@@ -9,7 +9,7 @@ class Loaders {
 	constructor(enableDebugMode = false) {
 		this._files = [];
 		this._xml = new XMLHttpRequest();
-		this._appPath = window.location.href;
+		this._appPath = this.__proto__.appPath;
 
 		this._debugMode = enableDebugMode;
 	}

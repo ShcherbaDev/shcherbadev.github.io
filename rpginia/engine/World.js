@@ -12,7 +12,7 @@ export default class World {
 
 		this._canvas = this.__proto__.canvas;
 		this._context = this.__proto__.context;
-		this._appPath = window.location.href;
+		this._appPath = this.__proto__.appPath;
 	}
 
 	_doController(item) {
@@ -81,9 +81,6 @@ export default class World {
 								if(!this._levels[i].data.elements[j].currentFrame)
 									this._levels[i].data.elements[j].currentFrame = this._levels[i].data.elements[j].frameFrom;
 							}
-
-							else
-								console.log(this._levels[i].data.elements[j].currentFrame)
 
 							if(!this._levels[i].data.elements[j].coords[2]) {
 								if(this._levels[i].spriteSheets[this._levels[i].data.elements[j].spriteSheetIndex].sprites[this._levels[i].data.elements[j].spriteIndex].rect)

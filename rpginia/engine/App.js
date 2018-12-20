@@ -32,6 +32,7 @@ class App {
 		 * @memberof RPGinia#App
 		 */
 		this.__proto__.Loaders = Loaders;
+		Loaders.prototype.appPath = this.__proto__.appPath;
 
 		/**
 		 * Class for event handling from the keyboard.
@@ -46,6 +47,7 @@ class App {
 		 * @memberof RPGinia#App
 		 */
 		this.__proto__.AudioManager = AudioManager;
+		AudioManager.prototype.appPath = this.__proto__.appPath;
 
 		/**
 		 * Class for drawing player.
@@ -60,6 +62,7 @@ class App {
 		 * @memberof RPGinia#App
 		 */
 		this.__proto__.World = World;
+		World.prototype.appPath = this.__proto__.appPath;
 		World.prototype.canvas = this._canvas;
 		World.prototype.context = this._context;
 
