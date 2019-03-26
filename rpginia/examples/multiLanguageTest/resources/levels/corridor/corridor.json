@@ -1,0 +1,49 @@
+{
+    "elements": [
+        {
+            "coords": [
+                150,
+                0,
+                3043,
+                490
+            ],
+            "isVisible": true,
+            "layer": 1,
+            "name": "Corridor",
+            "settings": {
+                "spriteIndex": 0,
+                "spriteSheetIndex": 1
+            },
+            "type": "sprite"
+        },
+        {
+            "coords": [
+                159,
+                303,
+                32,
+                32
+            ],
+            "isVisible": true,
+            "layer": 1,
+            "name": "Save point",
+            "settings": {
+                "frameFrom": 0,
+                "frameIndex": 0,
+                "frameTo": 1,
+                "interval": 500,
+                "isPlaying": true,
+                "isRepeating": true,
+                "spriteAnimation": 4,
+                "spriteIndex": 2,
+                "spriteSheetIndex": 1
+            },
+            "type": "sprite"
+        }
+    ],
+    "settings": {
+        "background": "#000",
+        "controllerPath": "/resources/levels/corridor/corridorController.js",
+        "name": "Last corridor",
+        "spriteSheetPath": "/resources/sprites/spriteSheets.json"
+    }
+}

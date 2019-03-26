@@ -1,0 +1,326 @@
+[
+    {
+        "file": "/resources/sprites/spriteSheet.png",
+        "sprites": [
+            {
+                "name": "background",
+                "rect": [0, 390, 653, 226]
+            },
+
+            {
+                "name": "snow1",
+                "rect": [0, 0, 20, 20]
+            },
+            {
+                "name": "snow2",
+                "rect": [27, 6, 12, 4]
+            },
+            {
+                "name": "hole",
+                "rect": [60, 60, 60, 60]
+            },
+            {
+                "name": "snow_bunch",
+                "rect": [0, 80, 58, 40]
+            },
+            {
+                "name": "snow_rock",
+                "rect": [64, 329, 17, 60]
+            },
+            {
+                "name": "snow_road_edge",
+                "rect": [42, 329, 23, 4]
+            },
+            {
+                "name": "snow_slope_left",
+                "rect": [21, 329, 21, 21]
+            },
+            {
+                "name": "snow_slope_right",
+                "rect": [0, 329, 21, 21]
+            },
+            {
+                "name": "snow_smooth_turn_bottom_right",
+                "rect": [81, 329, 15, 56]
+            },
+            {
+                "name": "snow_road",
+                "rect": [21, 39, 20, 20]
+            },
+            {
+                "name": "snow_road_border_bottom_right",
+                "rect": [0, 21, 20, 20]
+            },
+            {
+                "name": "snow_road_border_right",
+                "rect": [0, 40, 20, 20]
+            },
+            {
+                "name": "snow_road_border_top_right",
+                "rect": [0, 60, 20, 20]
+            },
+            {
+                "name": "snow_road_border_top",
+                "rect": [20, 60, 20, 20]
+            },
+            {
+                "name": "snow_road_border_top_left",
+                "rect": [40, 60, 20, 20]
+            },
+            {
+                "name": "snow_road_border_left",
+                "rect": [40, 40, 20, 20]
+            },
+            {
+                "name": "snow_road_border_bottom_left",
+                "rect": [40, 20, 20, 20]
+            },
+
+
+            {
+                "name": "sand",
+                "rect": [0, 370, 20, 20]
+            },
+            {
+                "name": "sea",
+                "rect": [20, 370, 20, 20]
+            },
+            {
+                "name": "sand_smooth_trun_top_left",
+                "rect": [0, 350, 20, 20]
+            },
+            {
+                "name": "sand_border_right",
+                "rect": [20, 350, 20, 20]
+            },
+            {
+                "name": "sand_border_top",
+                "rect": [40, 350, 20, 20]
+            },
+
+
+            {
+                "name": "hotel_shop_house",
+                "rect": [314, 0, 312, 140]
+            },
+            {
+                "name": "grillby_house",
+                "rect": [704, 0, 214, 168]
+            },
+            {
+                "name": "library_house",
+                "rect": [918, 3, 248, 138]
+            },
+            {
+                "name": "sans_papyrus_house",
+                "rect": [314, 140, 212, 203]
+            },
+            {
+                "name": "sans_papyrus_house_garage",
+                "rect": [526, 140, 111, 112]
+            },
+            {
+                "name": "town_house",
+                "rect": [526, 252, 128, 118]
+            },
+            {
+                "name": "ice_factory_house",
+                "rect": [626, 0, 78, 128]
+            },
+            {
+                "name": "ice_factory_house_door",
+                "rect": [637, 128, 14, 51]
+            },
+            {
+                "name": "teleport_house",
+                "rect": [264, 321, 50, 39]
+            },
+
+
+            {
+                "name": "interior_library",
+                "rect": [930, 140, 320, 240]
+            },
+            {
+                "name": "interior_grillby",
+                "rect": [930, 380, 320, 240]
+            },
+            {
+                "name": "interior_grillby_small_table",
+                "rect": [660, 128, 44, 50]
+            },
+            {
+                "name": "interior_grillby_smaller_table",
+                "rect": [715, 203, 36, 32]
+            },
+            {
+                "name": "interior_grillby_big_table",
+                "rect": [637, 179, 78, 53]
+            },
+            {
+                "name": "interior_grillby_big_table",
+                "rect": [637, 179, 78, 53]
+            },
+            {
+                "name": "interior_grillby_bar_table",
+                "rect": [715, 168, 134, 35]
+            },
+            {
+                "name": "interior_grillby_chair_right",
+                "rect": [751, 203, 16, 26]
+            },
+            {
+                "name": "interior_grillby_chair_left",
+                "rect": [767, 203, 16, 26]
+            },
+            {
+                "name": "interior_grillby_sofas",
+                "rect": [654, 235, 75, 109]
+            },
+            {
+                "name": "interior_hotel_lobby",
+                "rect": [610, 620, 320, 240]
+            },
+            {
+                "name": "interior_hotel_sleeping_room",
+                "rect": [930, 620, 320, 241]
+            },
+
+
+            {
+                "name": "single_tree",
+                "rect": [120, 60, 54, 60]
+            },
+            {
+                "name": "two_trees_in_column",
+                "rect": [117, 120, 94, 60]
+            },
+
+            {
+                "name": "welcome_to_snowdin",
+                "rect": [0, 220, 178, 45]
+            },
+            {
+                "name": "table",
+                "rect": [114, 180, 20, 20]
+            },
+            {
+                "name": "snowman",
+                "rect": [134, 180, 36, 37]
+            },
+            {
+                "name": "christmas_tree",
+                "rect": [254, 240, 60, 81]
+            },
+            {
+                "name": "mail_box_empty",
+                "rect": [314, 343, 14, 26]
+            },
+            {
+                "name": "mail_box_full",
+                "rect": [328, 343, 22, 35]
+            },
+            {
+                "name": "doghouse",
+                "rect": [350, 343, 34, 32]
+            },
+
+
+            {
+                "name": "figure_snowball",
+                "rect": [384, 343, 7, 7]
+            },
+            {
+                "name": "figure_banana",
+                "rect": [391, 343, 19, 9]
+            },
+            {
+                "name": "figure_hat",
+                "rect": [410, 343, 18, 12]
+            },
+            {
+                "name": "figure_house",
+                "rect": [428, 343, 11, 14]
+            },
+            {
+                "name": "figure_duck",
+                "rect": [439, 343, 14, 16]
+            },
+            {
+                "name": "figure_dog",
+                "rect": [453, 343, 20, 19]
+            },
+
+
+            {
+                "name": "bridge_back",
+                "rect": [100, 10, 60, 30]
+            },
+            {
+                "name": "bridge_front",
+                "rect": [100, 0, 60, 10]
+            },
+
+
+            {
+                "name": "ice_factory_conveyor",
+                "frames": [
+                    {
+                        "name": "conveyor_1",
+                        "rect": [0, 265, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_2",
+                        "rect": [69, 265, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_3",
+                        "rect": [138, 265, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_4",
+                        "rect": [0, 281, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_5",
+                        "rect": [69, 281, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_6",
+                        "rect": [138, 281, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_7",
+                        "rect": [0, 297, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_8",
+                        "rect": [69, 297, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_9",
+                        "rect": [138, 297, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_10",
+                        "rect": [0, 313, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_11",
+                        "rect": [69, 313, 69, 16]
+                    },
+                    {
+                        "name": "conveyor_12",
+                        "rect": [138, 313, 69, 16]
+                    }
+                ]
+            },
+
+            
+            {
+                "name": "snow_road_border_top",
+                "rect": [60, 60, 20, 20]
+            }
+        ]
+    }
+]

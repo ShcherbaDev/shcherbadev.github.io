@@ -1,0 +1,33 @@
+{
+    "settings": {
+        "name": "Dialog",
+        "background": "#000000",
+        "controllerPath": "/resources/levels/dialog/dialogController.js"
+    },
+    "elements": [
+        {
+            "name": "testText",
+            "type": "text",
+            "settings": {
+                "text": "Some text here...",
+                "font": "8bitoperator",
+                "color": "#fff",
+                "size": 42,
+                "horizontalAlign": "left"
+            },
+            "coords": [20, 40]
+        },
+        {
+            "name": "selectedLanguage",
+            "type": "text",
+            "settings": {
+                "text": "Some text here...",
+                "font": "8bitoperator",
+                "color": "#fff",
+                "size": 38,
+                "horizontalAlign": "left"
+            },
+            "coords": [20, 80]
+        }
+    ]
+}

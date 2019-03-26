@@ -1,0 +1,28 @@
+{
+    "settings": {
+        "name": "Object class test",
+        "spriteSheetPath": "/resources/sprites/spriteSheets.json",
+        "background": "#000"
+    },
+    "elements": [   
+        {
+            "name": "jsonTextObject",
+            "type": "text",
+            "settings": {
+                "text": "Text created via JSON view file.",
+                "color": "#fff",
+                "size": 32,
+                "horizontalAlign": "left"
+            },
+            "coords": [150, 32]
+        },
+        {
+            "name": "jsonRectangleObject",
+            "type": "rectangle",
+            "settings": {
+                "fill": "green"
+            },
+            "coords": [150, 275, 100, 150]
+        }
+    ]
+}

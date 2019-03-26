@@ -1,0 +1,218 @@
+{
+    "elements": [
+        {
+            "coords": [
+                600,
+                100,
+                378,
+                42
+            ],
+            "isVisible": true,
+            "layer": 1,
+            "name": "appTitle",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "center",
+                "size": 42,
+                "text": "RPGinia audio test"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                1190,
+                585,
+                207,
+                18
+            ],
+            "isVisible": true,
+            "layer": 1,
+            "name": "soundtracksAuthor",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "right",
+                "size": 18,
+                "text": "Soundtracks by Toby Fox"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                10,
+                585,
+                261,
+                18
+            ],
+            "isVisible": true,
+            "layer": 1,
+            "name": "rpginiaAuthor",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "left",
+                "size": 18,
+                "text": "RPGinia by Andrey Shcherbakov"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                600,
+                240,
+                288,
+                36
+            ],
+            "isVisible": true,
+            "layer": 1,
+            "name": "soundtracks",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "center",
+                "size": 36,
+                "text": "Soundtrack list:"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                123,
+                290,
+                80,
+                32
+            ],
+            "isVisible": true,
+            "layer": 2,
+            "name": "soundtrackRuins",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "center",
+                "size": 32,
+                "text": "Ruins"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                250,
+                290,
+                80,
+                32
+            ],
+            "isVisible": true,
+            "layer": 2,
+            "name": "soundtrackSnowy",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "center",
+                "size": 32,
+                "text": "Snowy"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                382,
+                290,
+                112,
+                32
+            ],
+            "isVisible": true,
+            "layer": 2,
+            "name": "soundtrackSnowdin",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "center",
+                "size": 32,
+                "text": "Snowdin"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                554,
+                290,
+                176,
+                32
+            ],
+            "isVisible": true,
+            "layer": 2,
+            "name": "soundtrackBonetrousle",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "center",
+                "size": 32,
+                "text": "Bonetrousle"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                800,
+                290,
+                144,
+                32
+            ],
+            "isVisible": true,
+            "layer": 2,
+            "name": "soundtrackWaterfall",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "center",
+                "size": 32,
+                "text": "Waterfall"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                1030,
+                290,
+                224,
+                32
+            ],
+            "isVisible": true,
+            "layer": 2,
+            "name": "soundtrackAnotherMedium",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "center",
+                "size": 32,
+                "text": "Another Medium"
+            },
+            "type": "text"
+        },
+        {
+            "coords": [
+                122,
+                330,
+                224,
+                32
+            ],
+            "isVisible": true,
+            "layer": 2,
+            "name": "soundtrackGastersTheme",
+            "settings": {
+                "color": "#ffffff",
+                "font": "8bitoperator",
+                "horizontalAlign": "left",
+                "size": 32,
+                "text": "Gaster's theme"
+            },
+            "type": "text"
+        }
+    ],
+    "settings": {
+        "background": "#000",
+        "controllerPath": "/resources/levels/audioTest/audioTestController.js",
+        "name": "Audio Test"
+    }
+}

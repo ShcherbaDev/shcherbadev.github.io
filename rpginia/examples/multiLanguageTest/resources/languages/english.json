@@ -1,0 +1,10 @@
+{
+    "settings": {
+        "name": "English"
+    },
+    "replics": {
+        "test_multilanguage_text": "Hello, how it's going? ^_^",
+        "selected_language": "You selected English language!",
+        "ring": "(Ring...)"
+    }
+}
