@@ -1,7 +1,7 @@
 import RPGinia from '../../engine_0.1.3/RPGinia.js';
 import * as playerMovement from './resources/js/playerMovement.js';
 
-const engine = new RPGinia();
+const engine = new RPGinia('https://shcherbadev.github.io/rpginia/examples/multiLanguageTest/');
 const app = new engine.App('Test RPGinia app');
 const load = new app.Loaders();
 const world = new app.World(true);

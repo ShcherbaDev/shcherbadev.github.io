@@ -1,7 +1,7 @@
 import RPGinia from '../../engine_0.1.3/RPGinia.js';
 
-const engine = new RPGinia();
-const app = new engine.App("Test RPGinia app");
+const engine = new RPGinia('https://shcherbadev.github.io/rpginia/examples/objectTest/');
+const app = new engine.App('Test RPGinia app');
 const kb = new app.Keyboard();
 const load = new app.Loaders(true);
 const world = new app.World(true);
@@ -11,46 +11,46 @@ kb.addKey('arrRight', 39);
 
 world.initialize({
     app: app,
-    levels: load.jsonFile("level", "/resources/levels/test/view.json")
+    levels: load.jsonFile('level', '/resources/levels/test/view.json')
 });
 
 world.createElement({
-    name: "firstDynamicalText",
-    type: "text",
+    name: 'firstDynamicalText',
+    type: 'text',
     settings: {
-        text: "Text created via game.js",
-        color: "red",
+        text: 'Text created via game.js',
+        color: 'red',
         size: 32,
-        horizontalAlign: "left"
+        horizontalAlign: 'left'
     },
     coords: [151, 70],
     layer: 2
 });
 
 world.createElement({
-    name: "secondDynamicalText",
-    type: "text",
+    name: 'secondDynamicalText',
+    type: 'text',
     settings: {
-        text: "Text created via game.js (2)",
-        color: "#bbb",
+        text: 'Text created via game.js (2)',
+        color: '#bbb',
         size: 32,
-        horizontalAlign: "left"
+        horizontalAlign: 'left'
     },
     coords: [10, 500]
 });
 
 world.createElement({
-    name: "cyanRectangle",
-    type: "rectangle",
+    name: 'cyanRectangle',
+    type: 'rectangle',
     settings: {
-        fill: "cyan"
+        fill: 'cyan'
     },
     coords: [150, 140, 150, 120]
 });
 
 world.createElement({
-    name: "testDynamicalSprite",
-    type: "sprite",
+    name: 'testDynamicalSprite',
+    type: 'sprite',
     settings: {
         spriteSheetIndex: 0,
         spriteIndex: 0,
@@ -60,8 +60,8 @@ world.createElement({
 });
 
 world.createElement({
-    name: "testDynamicalAnimatedSprite",
-    type: "sprite",
+    name: 'testDynamicalAnimatedSprite',
+    type: 'sprite',
     settings: {
         spriteSheetIndex: 1,
         spriteIndex: 0,

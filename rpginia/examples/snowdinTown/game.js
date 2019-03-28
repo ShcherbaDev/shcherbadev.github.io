@@ -1,6 +1,6 @@
 import RPGinia from '../../engine_0.1.3/RPGinia.js';
 
-const engine = new RPGinia();
+const engine = new RPGinia('https://shcherbadev.github.io/rpginia/examples/snowdinTown/');
 const app = new engine.App('My snowdin town');
 const world = new app.World();
 const cam = new app.Camera();
