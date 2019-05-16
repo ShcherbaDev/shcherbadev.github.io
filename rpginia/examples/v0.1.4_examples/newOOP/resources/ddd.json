@@ -1,0 +1,9 @@
+{
+  "settings": {
+    "name": "dasdasd",
+    "background": "#000000",
+    "spriteSheetPath": "\\resources\\sprites\\spriteSheet.json",
+    "controllerPath": "\\resources\\levels\\snowdin_town\\snowdin_town_controller.js"
+  },
+  "elements": []
+}

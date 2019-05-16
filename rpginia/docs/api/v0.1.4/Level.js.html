@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Level.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.html">RPGinia</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.html#clearPlayground">clearPlayground</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.html#getGlobalVariable">getGlobalVariable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.html#setGlobalVariable">setGlobalVariable</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html">AudioManager</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#add">add</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#getAudioByName">getAudioByName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#pause">pause</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#play">play</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#stop">stop</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html">Keyboard</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html#addKey">addKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html#isPressed">isPressed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html#pressEvent">pressEvent</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.Loaders.html">Loaders</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Loaders.html#loadJsonFile">loadJsonFile</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Loaders.html#loadLevel">loadLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Loaders.html#loadSpriteSheet">loadSpriteSheet</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.html">World</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#addObjectInCurrentLevel">addObjectInCurrentLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#deleteObjectInCurrentLevel">deleteObjectInCurrentLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#getActiveLevel">getActiveLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#getObjectByName">getObjectByName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#getObjectsFromLayer">getObjectsFromLayer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#render">render</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#setLevel">setLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#sortObjectsByLayer">sortObjectsByLayer</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Rectangle.html">Rectangle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Rectangle.html#draw">draw</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Sprite.html">Sprite</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Sprite.html#draw">draw</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Text.html">Text</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Text.html#draw">draw</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Trigger.html">Trigger</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Trigger.html#draw">draw</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Trigger.html#isTouching">isTouching</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Level.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import ObjectManager from './ObjectManager.js';
+
+/**
+ * Level's class
+ * @memberof RPGinia.World.LevelManager
+ * @private
+ * @class
+ */
+class Level {
+	/**
+	 * @constructor
+	 * @async
+	 * @param {object} worldClass - World class. 
+	 * @param {object} levelJsonObject - JSON object of level. 
+	 */
+	constructor(worldClass, levelJsonObject) {
+		return (async () => {
+			const {settings, elements} = levelJsonObject;
+			const {name, background, controllerPath, spriteSheetName, spriteSheetPath} = settings;
+
+			this._world = worldClass;
+
+			this._appPath = this._world._app._appPath;
+
+			this._name = name;
+			this._background = background;
+
+			this._spriteSheetName = spriteSheetName;
+			this._spriteSheetPath = spriteSheetPath;
+			this._spriteSheet = this._spriteSheetName !== undefined ? this._findSpriteSheetByName() : await this._defineSpriteSheetByPath();
+
+			this._originalObjectList = elements;
+			this._objectManager = new ObjectManager(this);
+			this._objects = this._objectManager._objects;
+
+			if (this._world._levelManager._loadControllers &amp;&amp; controllerPath !== undefined) {
+				this._controller = await this._defineController(controllerPath);
+			}
+
+			this._isActive = false;
+            
+			return this;
+		})();
+	}
+
+	/**
+	 * Find sprite sheet by name.
+	 * @private
+	 * @returns {object} Found sprite sheet.
+	 * @throws {Error} If didn't find a searched sprite sheet.
+	 */
+	_findSpriteSheetByName() {
+		const indexOfRequiredSpriteSheet = this._world._loaders.spriteSheets.findIndex(spriteSheet => spriteSheet.name === this._spriteSheetName);
+
+		// If can found a required sprite sheet.
+		if (indexOfRequiredSpriteSheet !== -1) {
+			return this._world._loaders.spriteSheets[indexOfRequiredSpriteSheet];
+		}
+		throw new Error(`Can't find sprite sheet with name "${this._spriteSheetName}"`);
+	}
+
+	/**
+	 * Define sprite sheet by it's path.
+	 * @private
+	 * @async
+	 * @returns {object} Searched sprite sheet.
+	 */
+	async _defineSpriteSheetByPath() {
+		const indexOfRequiredSpriteSheet = this._world._loaders.spriteSheets.findIndex(spriteSheet => spriteSheet.url === this._appPath + this._spriteSheetPath);
+
+		// If can found a required sprite sheet.
+		if (indexOfRequiredSpriteSheet !== -1) {
+			return this._world._loaders.spriteSheets[indexOfRequiredSpriteSheet];
+		}
+        
+		const newSpriteSheet = await this._world._app._loaders.loadSpriteSheet(this._spriteSheetPath, this._spriteSheetPath);
+		return newSpriteSheet;
+	}
+
+	/**
+	 * Load level's controller.
+	 * @private
+	 * @async
+	 * @param {string} controllerPath - Path to controller.
+	 * @returns {function} Loaded controller function.
+	 */
+	async _defineController(controllerPath) {
+		const defineFile = await fetch(`${this._appPath}${controllerPath}`);
+		const response = await defineFile.text();
+		
+		const parseLevelControllerFunction = eval;
+		return parseLevelControllerFunction(`(${response})`);
+	}
+
+	/**
+	 * Find a game object by name.
+	 * @param {string} objectName - The name of a searched game object.
+	 * @returns {object} Searched game object.
+	 */
+	getObjectByName(objectName) {
+		return this._objects[this._objects.findIndex(item => item.settings.name === objectName)];
+	}
+
+	/**
+	 * Get game objects by layer.
+	 * @param {number} layerNumber - The number of a searched layer.
+	 * @returns {object[]} Game objects array which were in searched layer.
+	 */
+	getObjectsFromLayer(layerNumber) {
+		const resultArr = [];
+
+		this._objects.forEach((item) => {
+			if (item.settings.layer === layerNumber) {
+				resultArr.push(item);
+			}
+		});
+
+		return resultArr;
+	}
+
+	/**
+	 * Get the level's name.
+	 * @readonly
+	 * @type {string}
+	 */
+	get name() { return this._name; }
+}
+
+export default Level;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu May 16 2019 13:43:01 GMT+0300 (GMT+03:00) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

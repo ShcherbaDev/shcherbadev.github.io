@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LevelManager.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.html">RPGinia</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.html#clearPlayground">clearPlayground</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.html#getGlobalVariable">getGlobalVariable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.html#setGlobalVariable">setGlobalVariable</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html">AudioManager</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#add">add</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#getAudioByName">getAudioByName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#pause">pause</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#play">play</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#stop">stop</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html">Keyboard</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html#addKey">addKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html#isPressed">isPressed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html#pressEvent">pressEvent</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.Loaders.html">Loaders</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Loaders.html#loadJsonFile">loadJsonFile</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Loaders.html#loadLevel">loadLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Loaders.html#loadSpriteSheet">loadSpriteSheet</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.html">World</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#addObjectInCurrentLevel">addObjectInCurrentLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#deleteObjectInCurrentLevel">deleteObjectInCurrentLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#getActiveLevel">getActiveLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#getObjectByName">getObjectByName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#getObjectsFromLayer">getObjectsFromLayer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#render">render</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#setLevel">setLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#sortObjectsByLayer">sortObjectsByLayer</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Rectangle.html">Rectangle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Rectangle.html#draw">draw</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Sprite.html">Sprite</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Sprite.html#draw">draw</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Text.html">Text</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Text.html#draw">draw</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Trigger.html">Trigger</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Trigger.html#draw">draw</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Trigger.html#isTouching">isTouching</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">LevelManager.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Level from './Level.js';
+import Renderer from './Renderer.js';
+
+/**
+ * Class for changing levels.
+ * @memberof RPGinia.World
+ * @private
+ * @class
+ */
+class LevelManager {
+	/**
+	 * @constructor
+	 * @param {object} worldClass - World class. 
+	 */
+	constructor(worldClass) {
+		this._world = worldClass;
+
+		this._loaders = this._world._loaders;
+
+		this._renderer = new Renderer(this, this._world, this._loaders);
+
+		this._loadControllers = this._world._loadControllers;
+
+		this._levelList = [];
+	}
+
+	/**
+	 * Method for applying additional options for on changing level.
+	 * @private
+	 * @param {object} options - Additional options.
+	 */
+	_applyAdditionalOptions(options = {}) {
+		let {cameraPosition} = options;
+
+		if (cameraPosition === undefined) {
+			cameraPosition = [0, 0];
+		}
+		
+		this._world._camera._x = cameraPosition[0];
+		this._world._camera._y = cameraPosition[1];
+	}
+
+	/**
+	 * Do level's logic part.
+	 * @private
+	 * @param {object} levelContent - Level's object. 
+	 */
+	_doController(levelContent) {
+		if (levelContent._controller !== undefined) {
+			levelContent._controller({
+				app: this._world._app,
+				audioManager: this._world._app._audioManager,
+				keyboard: this._world._app._keyboard,
+				loaders: this._world._loaders,
+				world: this._world
+			});
+		}
+	}
+
+	/**
+	 * Method for changing level.
+	 * @private
+	 * @param {object} levelContent - Level's object. 
+	 * @param {object} additionalOptions - Additional options.
+	 */
+	_doLevel(levelContent, additionalOptions) {
+		const newLevel = levelContent;
+		const additionalOptionsForNewLevel = additionalOptions;
+
+		// Disable activity of previous level.
+		this._levelList[this._levelList.findIndex(async level => level._isActive)]._isActive = false;
+
+		// Enable activity of new level.
+		newLevel._isActive = true;
+
+		this._applyAdditionalOptions(additionalOptionsForNewLevel);
+
+		this._doController(newLevel);
+
+		if (this._world._app._debugMode) {
+			console.info(`Level with name "${newLevel._name}" is now active!`);
+		}
+		return newLevel;
+	}
+
+	/**
+	 * Changes level to another.
+	 * @async
+	 * @param {object|string} levelObjOrName - Level object from Loaders or existing level's name.
+	 * 
+	 * @param {object} additionalOptions - Options that will set the necessary values for game subsystems when changing levels.
+	 * @param {number[]} additionalOptions.cameraPosition - The start coordinates of camera when changing the level.
+	 */
+	async setLevel(levelObjOrName, additionalOptions) {
+		// If level is object and not an array.
+		if (typeof levelObjOrName === 'object' &amp;&amp; !Array.isArray(levelObjOrName)) {
+			const searchedLevelId = this._levelList.findIndex(level => level._name === levelObjOrName.data.settings.name);
+
+			// If given level is already exist.
+			if (searchedLevelId === -1) {
+				const levelContent = await new Level(this._world, levelObjOrName.data);
+				this._levelList.push(levelContent);
+				return this._doLevel(levelContent, additionalOptions);
+			}
+			throw new Error(`Level with name "${this._levelList[searchedLevelId].settings.name}" is already exist!`);
+		}
+		// If argument was given as a string.
+		else if (typeof levelObjOrName === 'string') {
+			const searchedLevelId = this._levelList.findIndex(level => level._name === levelObjOrName);
+
+			// If level with typed name wasn't found.
+			if (searchedLevelId === -1) {
+				throw new Error(`Level with name "${levelObjOrName}" wasn't found!`);
+			}
+			else {
+				return this._doLevel(this._levelList[searchedLevelId], additionalOptions);
+			}
+		}
+		else {
+			throw new TypeError('Argument\'s type should be a string or a object!');
+		}
+	}
+
+	/**
+	 * Method for getting active level.
+	 * @async
+	 * @returns {object} Active level.
+	 */
+	async getActiveLevel() {
+		const activeLevel = await this._levelList[this._levelList.findIndex(level => level._isActive)];
+		return activeLevel;
+	}
+}
+
+export default LevelManager;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu May 16 2019 13:43:01 GMT+0300 (GMT+03:00) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

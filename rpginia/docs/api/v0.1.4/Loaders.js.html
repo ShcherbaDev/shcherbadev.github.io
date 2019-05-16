@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Loaders.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.html">RPGinia</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.html#clearPlayground">clearPlayground</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.html#getGlobalVariable">getGlobalVariable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.html#setGlobalVariable">setGlobalVariable</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html">AudioManager</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#add">add</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#getAudioByName">getAudioByName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#pause">pause</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#play">play</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.AudioManager.html#stop">stop</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html">Keyboard</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html#addKey">addKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html#isPressed">isPressed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Keyboard.html#pressEvent">pressEvent</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.Loaders.html">Loaders</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Loaders.html#loadJsonFile">loadJsonFile</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Loaders.html#loadLevel">loadLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.Loaders.html#loadSpriteSheet">loadSpriteSheet</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.html">World</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#addObjectInCurrentLevel">addObjectInCurrentLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#deleteObjectInCurrentLevel">deleteObjectInCurrentLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#getActiveLevel">getActiveLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#getObjectByName">getObjectByName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#getObjectsFromLayer">getObjectsFromLayer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#render">render</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#setLevel">setLevel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.html#sortObjectsByLayer">sortObjectsByLayer</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Rectangle.html">Rectangle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Rectangle.html#draw">draw</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Sprite.html">Sprite</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Sprite.html#draw">draw</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Text.html">Text</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Text.html#draw">draw</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Trigger.html">Trigger</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Trigger.html#draw">draw</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="RPGinia.World.GameObject.Trigger.html#isTouching">isTouching</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Loaders.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Class for loading files.
+ * @memberof RPGinia
+ * @class
+ */
+class Loaders {
+	/**
+	 * @constructor
+	 * @param {object} [appClass] - RPGinia app.
+	 */
+	constructor(rpginiaApp) {
+		this._app = rpginiaApp;
+
+		/** 
+		 * App path from the prototype given from App class.
+		 * @type {String}
+		 * @private
+		 */
+		this._appPath = this._app._appPath;
+
+		this._debugMode = this._app._debugMode;
+
+		/**
+		 * Files array.
+		 * @type {Object[]}
+		 * @private
+		 */
+		this._files = [];
+
+		this._app._loaders = this;
+	}
+
+	/**
+	 * Check if level is passing the conditions.
+	 * @private
+	 * @param {object} json - Level's JSON.
+	 * @returns {boolean} If level is passing the conditions.
+	 */
+	_checkLevelCondition(json) {
+		const {settings, elements} = json;
+		const {name} = settings;
+
+		return settings !== undefined &amp;&amp; name !== undefined &amp;&amp; elements.length >= 0;
+	}
+
+	/**
+	 * Check if sprite sheet is passing the condition.
+	 * @private
+	 * @param {object} json - Sprite sheet's JSON.
+	 * @returns {boolean} If sprite sheet is passing the conditions.
+	 */
+	_checkSpriteSheetCondition(json) {
+		return json.length >= 1;
+	}
+
+	/**
+	 * Check if file is passing the conditions.
+	 * @private
+	 * @param {string} type - File's type.
+	 * @param {string} url - File's URL.
+	 * @param {object} json - File's JSON content.
+	 * @returns {boolean} If level is passing the conditions - returns true, else - returns false.
+	 */
+	_checkFileConditions(type, url, json) {
+		const isUnique = () => this._files.indexOf(url) === -1;
+		
+		// If file is not exist
+		if (isUnique()) {
+			if (type === 'level') {
+				return this._checkLevelCondition(json);
+			}
+			if (type === 'spriteSheet') {
+				return this._checkSpriteSheetCondition(json);
+			}
+			// There aren't any rules for json only files.
+			if (type === 'json') {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Get files by type.
+	 * @private
+	 * @param {string} type - files type.
+	 * @returns {object[]} Result array.
+	 */
+	_getFilesByType(type) {
+		const resultArr = [];
+
+		this._files.forEach((file) => {
+			if (file.type === type) {
+				resultArr.push(file);
+			}
+		});
+
+		return resultArr;
+	}
+
+	/**
+	 * Load new JSON file.
+	 * @async
+	 * @private
+	 * @param {string} type - File's type.
+	 * @param {string} path - Path to file.
+	 * @param  {...any} args - Additional arguments. The first one is a name.
+	 * @returns {object} Loaded file.
+	 * @throws {Error} If file didn't passed the conditions.
+	 */
+	async _loadJsonFile(type, path, ...args) {
+		const request = await fetch(`${this._appPath}${path}`);
+		const json = await request.json();
+
+		if (this._checkFileConditions(type, request.url, json)) {
+			const settings = {
+				type,
+				url: request.url,
+				data: json
+			};
+
+			if (type === 'spriteSheet' || type === 'json') {
+				settings.name = args[0];
+			}
+
+			this._files.push(settings);
+
+			const newFile = this._files[this._files.length - 1];
+
+			// Log to console if debug mode is enabled.
+			if (this._app._debugMode) {
+				let fileName = null;
+
+				if (type === 'level') {
+					fileName = newFile.data.settings.name;
+				}
+				else if (type === 'spriteSheet' || type === 'json') {
+					fileName = args[0];
+				}
+
+				console.info(`${type.toUpperCase()} "${fileName}" has been loaded!`);
+			}
+
+			return newFile;
+		}
+		
+		throw new Error(`${type.toUpperCase()} didn't passed the conditions!`);
+	}
+
+	/**
+	 * Load new level.
+	 * @async
+	 * @param {string} path - Path to level. 
+	 */
+	async loadLevel(path) {
+		const loadedLevel = await this._loadJsonFile('level', path);
+		return loadedLevel;
+	}
+
+	/**
+	 * Load new sprite sheet.
+	 * @async
+	 * @param {string} name - Sprite sheet's name. 
+	 * @param {string} path - Path to sprite sheet.
+	 */
+	async loadSpriteSheet(name, path) {
+		const loadedSpriteSheet = await this._loadJsonFile('spriteSheet', path, name);
+		return loadedSpriteSheet;
+	}
+
+	/**
+	 * Load new JSON file.
+	 * @async
+	 * @param {string} name - JSON file's name.
+	 * @param {string} path - Path to JSON file.
+	 */
+	async loadJsonFile(name, path) {
+		const loadedJsonFile = await this._loadJsonFile('json', path, name);
+		return loadedJsonFile;
+	}
+
+	/** 
+	 * Get an array of loaded levels.
+	 * @readonly
+	 * @type {object[]}
+	 */
+	get levels() {
+		return this._getFilesByType('level');
+	}
+
+	/** 
+	 * Get an array of loaded sprite sheets.
+	 * @readonly
+	 * @type {object[]}
+	 */
+	get spriteSheets() {
+		return this._getFilesByType('spriteSheet');
+	}
+
+	/**
+	 * Get an array of files that are not processed by the engine.
+	 * @readonly
+	 * @type {object[]}
+	 */
+	get jsonFiles() {
+		return this._getFilesByType('json');
+	}
+	
+	/** 
+	 * Get an array of files.
+	 * @readonly
+	 * @type {object[]}
+	 */
+	get files() { return this._files; }
+}
+
+export default Loaders;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu May 16 2019 13:43:01 GMT+0300 (GMT+03:00) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
