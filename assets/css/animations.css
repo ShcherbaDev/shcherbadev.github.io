@@ -1,0 +1,57 @@
+@keyframes backgroundMovement {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(1.2)
+	}
+}
+
+@keyframes firstSlideLeftPartAppear {
+	0% {
+		left: -50px;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	70% {
+		opacity: 1;
+	}
+
+	100% {
+		left: 0;
+	}
+}
+
+@keyframes firstSlideRightPartAppear {
+	0% {
+		left: 50px;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	70% {
+		opacity: 1;
+	}
+
+	100% {
+		left: 0;
+	}
+}

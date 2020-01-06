@@ -1,0 +1,20 @@
+<header>
+    <div class="container h-100">
+        <div class="row align-items-center justify-content-md-center h-100 me-header">
+            <div class="col-4 mr-1 avatar">
+                <img src="https://avatars2.githubusercontent.com/u/29505891?s=460&v=4" alt="My avatar" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-6 ml-1 info">
+                <h1 class="display-4 mb-0">Andrey Shcherbakov</h1>
+                <div class="anim">
+                    {% for phrase in site.data.header-phrases %}
+                        <span>{{ phrase }}</span>
+                    {% endfor %}
+                </div>
+                <a class="btn btn-primary" href="#about">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-background"></div>
+</header>
