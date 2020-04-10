@@ -1,18 +1,16 @@
 {% include landing/section-template/section-header.html className="projects" id="projects" name="My projects" %}
     <div class="row" id="project-list">
         {% for project in site.data.projects %}
-            {% if project.wip == nil or project.wip == false %}
-                <div class="col-4 py-3">
-                    <div class="card project-card">
-                        <img src="{{ project.previewImage }}" alt="{{ project.altName }}" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ project.name }}</h5>
-                            <p class="card-text">{{ project.description }}</p>
-                            <a href="{{ project.link }}" class="btn btn-block btn-primary project-link" target="_blank">Go to project</a>
-                        </div>
+            <div class="col-4 py-3">
+                <div class="card project-card" itemscope itemtype="http://schema.org/CreativeWork">
+                    <img src="{{ project.previewImage }}" alt="{{ project.altName }}" class="card-img-top" itemprop="thumbnailUrl">
+                    <div class="card-body">
+                        <h5 class="card-title" itemprop="name">{{ project.name }}</h5>
+                        <p class="card-text" itemprop="description">{{ project.description }}</p>
+                        <a href="{{ project.link }}" class="btn btn-block btn-primary project-link" target="_blank">Go to project</a>
                     </div>
                 </div>
-            {% endif %}
+            </div>
         {% endfor %}
     </div>
 {% include landing/section-template/section-footer.html %}

@@ -23,12 +23,16 @@ function initHeader() {
 		headerParallax();
 	});
 
-	setInterval(() => {
-		backgroundCounter = backgroundCounter < paths.length-1
-			? backgroundCounter + 1
-			: 0;
+	const animationTime = 10000;
+	headerBackgroundImage.style.animation = `backgroundMovement ${animationTime/1000}s infinite linear`;
+
+	headerBackgroundImage.addEventListener('animationiteration', () => {
+		backgroundCounter++;
+		if (backgroundCounter === paths.length) {
+			backgroundCounter = 0;
+		}
 		headerBackgroundImage.style.backgroundImage = `url(${paths[backgroundCounter]})`;
-	}, 10000);
+	});
 
 	$('header .anim').slick({
 		vertical: true,
@@ -42,29 +46,8 @@ function initHeader() {
 }
 initHeader();
 
-function initNavbar() {
-	function setNavbarPosition() {
-		if (window.pageYOffset >= document.body.clientHeight) {
-			navbar.classList.add('fixed-top');
-			document.body.querySelectorAll('section').forEach(it => {
-				it.style.padding = `calc(2% + 56px * 2) 0`;
-			});
-		}
-		else {
-			navbar.classList.remove('fixed-top');
-			document.body.querySelectorAll('section').forEach(it => {
-				it.style.padding = `calc(2% + 56px) 0`;
-			});
-		}
-	}
-
-	const navbar = document.body.querySelector('nav');
-
-	window.addEventListener('scroll', () => {
-		setNavbarPosition();
-	});
-	window.addEventListener('load', () => {
-		setNavbarPosition();
-	});
-}
-initNavbar();
+// Init vertical timeline
+$('.timeline').timeline({
+	verticalStartPosition: 'left',
+	verticalTrigger: '120px'
+});

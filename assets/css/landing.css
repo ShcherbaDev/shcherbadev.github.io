@@ -1,0 +1,186 @@
+section {
+	padding: calc(2% + 56px) 0;
+	position: relative;
+}
+
+header {
+	height: 100vh;
+	background: linear-gradient(45deg, rgba(38, 35, 129, .96), rgba(56, 53, 113, .96));
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+header .anim span {
+	font-size: 26px;
+	font-weight: 500;
+	color: #14C3DF;
+	overflow: hidden;
+}
+
+header .avatar > img {
+	position: relative;
+	max-width: 90%;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .33);
+	animation: firstSlideLeftPartAppear 1.5s ease-in-out;
+}
+
+header .info {
+	animation: firstSlideRightPartAppear 1.5s ease-in-out;
+}
+
+header > .image-background {
+	background: url(/images/landing/header_backgrounds/0.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	z-index: -1;
+}
+
+header a {
+	display: inline-block;
+	margin-top: 22px;
+	position: relative;
+	padding: 6px 45px;
+	transition: .5s all !important;
+}
+
+header a:hover {
+	padding: 6px 65.5px 6px 25px !important;
+}
+
+header a::after {
+	position: absolute;
+	top: -5px;
+	bottom: 0;
+	right: 32px;
+	transform: rotateZ(90deg);
+	font-size: 24px;
+	content: '\279C';
+	opacity: 0;
+	transition: .3s linear;
+}
+
+header a:hover::after {
+	opacity: 1;
+	top: 0;
+	right: 28.5px;
+}
+
+.skill:not(:first-child) {
+	margin-top: 8px;
+}
+
+.skill h5 {
+	margin-bottom: 4px;
+}
+
+a.projects-link {
+	margin-top: 20px;
+}
+
+#project-list .card {
+	height: 100%;
+}
+
+#project-list .card p.card-text {
+	height: 34.5%;
+	overflow-y: auto;
+}
+
+.project-card img.card-img-top {
+	height: 200px;
+	object-fit: contain;
+	padding: 10px;
+	transition: .5s all ease-in-out;
+}
+
+.project-card:hover img {
+	padding: 5px;
+}
+
+section.blog {
+    margin-bottom: 70px;
+}
+
+section.blog a:hover {
+	text-decoration: none;
+}
+
+section.blog a:hover li:last-child {
+	background-color: #f9f9f9;
+}
+
+section.contact {
+    position: relative;
+    color: #fff;
+    background-color: rgb(54, 31, 133);
+	background-image: linear-gradient(180deg, rgb(54, 31, 133), rgb(63, 49, 142));
+	padding: 2.5rem 0;
+}
+
+section.contact::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    height: 70px;
+	background-image: url(/images/landing/top_section_separator.png);
+	background-position-x: center;
+}
+
+section.contact ul li {
+	list-style: none;
+	font-size: 22px;
+	margin-top: 5px;
+}
+
+section.contact ul li a {
+	color: #eee;
+	vertical-align: middle;
+}
+
+section.contact ul li a:hover,
+section.contact ul li a:hover i {
+	color: #fff;
+}
+
+section.contact ul li a i {
+	color: #ddd;
+	font-size: 24px;
+	width: 38px;
+	padding: 7px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, .15);
+	margin-right: 5px;
+	text-decoration: none;
+}
+
+section.contact .form-group input,
+section.contact .form-group textarea {
+	color: #fff;
+	background-color: rgba(255, 255, 255, .2);
+	border-color: transparent;
+}
+
+section.contact .form-group input::placeholder {
+	color: #bbb;
+}
+
+body.landing footer {
+    background: rgb(63, 49, 142);
+	color: #eee;
+}

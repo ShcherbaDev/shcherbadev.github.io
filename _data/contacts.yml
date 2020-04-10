@@ -1,0 +1,16 @@
+- link: https://github.com/ShcherbaDev
+  label: ShcherbaDev
+  icon: fab fa-github
+
+- link: \#
+  label: Shcherba#0704
+  icon: fab fa-discord
+
+- link: https://www.facebook.com/profile.php?id=100010853207140
+  label: Andrey Shcherbakov
+  icon: fab fa-facebook
+
+- link: mailto:andrey.shcherbakov05@gmail.com
+  label: andrey.shcherbakov05@gmail.com
+  icon: fas fa-envelope
+  itemprop: email

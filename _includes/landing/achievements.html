@@ -4,9 +4,9 @@
             <div class="timeline__items">
                 {% for achievement in site.data.achievements %}
                     <div class="timeline__item">
-                        <div class="timeline__content">
+                        <div class="timeline__content" itemscope itemtype="http://schema.org/Person">
                             <h2>{{ achievement.label }}</h2>
-                            {{ achievement.text }}
+                            <p itemprop="award">{{ achievement.text }}</p>
                         </div>
                     </div>
                 {% endfor %}

@@ -3,15 +3,6 @@
 	padding: 0;
 }
 
-html, body, header {
-	height: 100%;
-}
-
-section {
-	min-height: 100%;
-	padding: calc(2% + 56px) 0;
-}
-
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
@@ -19,6 +10,10 @@ body {
 
 h1 {
 	font-weight: 700!important;
+}
+
+img {
+	max-width: 100%;
 }
 
 .btn.btn-primary {
@@ -36,103 +31,9 @@ h1 {
 	background: linear-gradient(to right, #14C3DF, #16A3C5) rgba(79, 74, 167, 0.96);
 }
 
-header {
-	background: linear-gradient(45deg, rgba(38, 35, 129, .96), rgba(56, 53, 113, .96));
-	color: #fff;
-	position: relative;
-	overflow: hidden;
-}
-
-header .anim span {
-	font-size: 26px;
-	font-weight: 500;
-	color: #14C3DF;
-	overflow: hidden;
-}
-
-header .avatar > img {
-	position: relative;
-	max-width: 90%;
-	box-shadow: 0 3px 5px rgba(0, 0, 0, .33);
-	animation: firstSlideLeftPartAppear 1.5s ease-in-out;
-}
-
-header .info {
-	animation: firstSlideRightPartAppear 1.5s ease-in-out;
-}
-
-header > .image-background {
-	background: url(/images/landing/header_backgrounds/0.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	animation: backgroundMovement 10s infinite linear;
-
-	width: 100%;
-	height: 100%;
-
-	position: absolute;
-
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-
-	z-index: -1;
-}
-
-header a {
-	display: inline-block;
-	margin-top: 22px;
-	position: relative;
-	padding: 6px 45px;
-	transition: .5s all !important;
-}
-
-header a:hover {
-	padding: 6px 65.5px 6px 25px !important;
-}
-
-header a::after {
-	position: absolute;
-	top: -5px;
-	bottom: 0;
-	right: 32px;
-	transform: rotateZ(90deg);
-	font-size: 24px;
-	content: '\279C';
-	opacity: 0;
-	transition: .3s linear;
-}
-
-header a:hover::after {
-	opacity: 1;
-	top: 0;
-	right: 28.5px;
-}
-
-#project-list .card {
-	height: 100%;
-}
-
-#project-list .card p.card-text {
-	height: 34.5%;
-	overflow-y: auto;
-}
-
-.project-card img.card-img-top {
-	height: 200px;
-	object-fit: contain;
-	padding: 10px;
-	transition: .5s all ease-in-out;
-}
-
-.project-card:hover img {
-	padding: 5px;
-}
-
-.timeline:not(.timeline--horizontal):before {
-	bottom: 68px;
-	top: 68px;
+footer {
+	padding: 10px 0;
+	background-color: #f2f2f2;
+	color: #444;
+	text-align: center;
 }

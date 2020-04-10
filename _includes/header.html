@@ -7,8 +7,12 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="https://squarechip.github.io/timeline/css/timeline.min.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/animations.css">
+    {% if page.url == "/" %}
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="/assets/css/landing.css">
+        <link rel="stylesheet" href="/assets/css/animations.css">
+    {% endif %}
 </head>
-<body>
+<body class="{% if page.url == "/" %}landing{% endif %}">

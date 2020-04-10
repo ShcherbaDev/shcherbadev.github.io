@@ -1,6 +1,6 @@
 - name: School website
   altName: Mriya school class website
-  description: Website of my 5-8 school classes "Mriya"<br/><i>(Ukrainian only!)</i>
+  description: My first project ever. Website of my 5-8 school classes "Mriya".<br/><i>(Ukrainian only!)</i>
   link: http://mriyaclass.in.ua/
   previewImage: http://mriyaclass.in.ua/templates/mriya_fixed/images/logo.png
 
@@ -10,12 +10,8 @@
   link: https://github.com/ShcherbaDev/RPGinia/
   previewImage: /images/rpginia_logo_mini.png
 
-- name: <abbr title="IPTV Playlist Constructor">IPTVPLC</abbr>
+- name: IPTV Playlist Constructor
   altName: IPTV Playlist Constructor
-  description: <a href="https://en.wikipedia.org/wiki/M3U" target="_blank">M3U</a> file constructor<br/><i>(Russian only!)</i>
-  link: http://iptvplc.com/
-  previewImage: http://iptvplc.com/static/images/iptvplc.svg
-
-- name: ARization Project
-  description: AR things
-  wip: True
+  description: <a href="https://en.wikipedia.org/wiki/M3U" target="_blank">M3U</a> file editor
+  link: http://github.com/ShcherbaDev/IPTVPLC
+  previewImage: /images/iptvplc_logo.png

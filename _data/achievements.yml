@@ -6,9 +6,10 @@
 
 - label: Winter 2017
   text: First win in all-ukrainian contest "<a href="https://italent.org.ua/" target="_blank">iTalent</a>" in the "WEB" nomination.
+        <br/>Win in all-ukrainian <a href="https://іоіт.укр" target="_blank">Internet Olympiad in Information Technology</a> in the "<a href="https://іоіт.укр/веб" target="_blank">Web-technologies</a>" nomination.
 
-- label: May 2019
+- label: Spring 2019
   text: Second win in all-ukrainian contest "<a href="https://italent.org.ua/" target="_blank">iTalent</a>" in the "Soft&Mobile" nomination.
 
-- label: 22 December 2019
-  text: Third win in all-ukrainian contest "<a href="https://italent.org.ua/" target="_blank">iTalent</a>" in the "WEB Application" nomination.
+- label: Winter 2019-2020
+  text: Third win in all-ukrainian contest "<a href="https://italent.org.ua/" target="_blank">iTalent</a>" in the "WEB Application" nomination.<br/>Runner Up by <a href="https://codein.withgoogle.com/organizations/wikimedia/" target="_blank">Wikimedia</a> in <a href="https://codein.withgoogle.com/" target="_blank">Google Code-In</a> 2019.

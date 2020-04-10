@@ -1,0 +1,24 @@
+{% include landing/section-template/section-header.html className="blog" id="blog" name="Blog" %}
+    <p>Few latest posts:</p>
+
+    {% for post in site.posts limit:3 %}
+        <a href="{{ post.url }}">
+            <ul class="list-group list-group-horizontal my-4">
+                {% if post.previewImage != nul %}
+                    <li class="list-group-item">
+                        <img src="{{ post.previewImage }}" alt="{{ post.title }}" style="max-width: 65px; max-height: 65px;">
+                    </li>
+                {% endif %}
+                <li class="list-group-item w-100 d-flex flex-column justify-content-center">
+                    <h5>{{ post.title }}</h5>
+                    <h6 class="text-muted mb-0">
+                        {{ post.date | date: "%-d %B %Y" }}
+                        {% if post.category != nul %} / {{ post.category }}{% endif %}
+                    </h6>
+                </li>
+            </ul>
+        </a>
+    {% endfor %}
+
+    <a class="btn btn-primary btn-block" href="/blog">More...</a>
+{% include landing/section-template/section-footer.html %}
