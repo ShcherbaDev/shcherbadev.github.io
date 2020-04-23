@@ -1,8 +1,8 @@
-title: Andrey Shcherbakov
+title: Andrey Shcherbakov website
 email: andrey.shcherbakov05@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Landing page of Andrey Shcherbakov.
-  There are also my blog posts about my achievements,
+  There are also my blog posts,
   projects etc.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://shcherbadev.github.io # the base hostname & protocol for your site, e.g. http://example.com

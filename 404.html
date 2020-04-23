@@ -5,21 +5,33 @@ layout: default
 
 <style type="text/css" media="screen">
 	.container {
-		margin: 10px auto;
-		max-width: 600px;
-		text-align: center;
+		display: flex;
+		height: 85vh;
+		align-items: center;
+		justify-content: center;
 	}
 	h1 {
-		margin: 30px 0;
-		font-size: 4em;
-		line-height: 1;
-		letter-spacing: -1px;
+		font-size: 5em;
+		margin-bottom: 0;
+		line-height: 85px;
+	}
+	footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
 </style>
 
 <div class="container">
-	<h1>404</h1>
-
-	<p><strong>Page not found :(</strong></p>
-	<p>The requested page could not be found.</p>
+	<div class="row w-100 justify-content-center">
+		<div class="col-lg-6 col-12 d-flex flex-column align-items-center justify-content-center">
+			<h1>404</h1>
+			<h2>Page not found</h2>
+			<a href="/">Go back to the main page</a>
+		</div>
+		<div class="col-lg-6 d-none d-lg-block text-center">
+			<img src="https://art.pixilart.com/e87170a375e6434.gif" alt="Sr.Pelo">
+		</div>
+	</div>
 </div>
