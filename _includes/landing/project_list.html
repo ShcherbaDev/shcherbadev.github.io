@@ -1,7 +1,7 @@
 {% include landing/section-template/section-header.html className="projects" id="projects" name="My projects" %}
-    <div class="row" id="project-list">
+    <div class="row justify-content-around" id="project-list">
         {% for project in site.data.projects %}
-            <div class="col-4 py-3">
+            <div class="col-4 my-3">
                 <div class="card project-card" itemscope itemtype="http://schema.org/CreativeWork">
                     <img src="{{ project.previewImage }}" alt="{{ project.altName }}" class="card-img-top" itemprop="thumbnailUrl">
                     <div class="card-body">

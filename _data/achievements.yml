@@ -1,15 +1,8 @@
-- label: Summer 2016
-  text: Became interested in programming and learning HTML and CSS
-  
-- label: Autumn 2016
-  text: Created a first website as a practice.
+- title: 3
+  description: Victories in all-ukrainian contest "iTalent"
 
-- label: Winter 2017
-  text: First win in all-ukrainian contest "<a href="https://italent.org.ua/" target="_blank">iTalent</a>" in the "WEB" nomination.
-        <br/>Win in all-ukrainian <a href="https://іоіт.укр" target="_blank">Internet Olympiad in Information Technology</a> in the "<a href="https://іоіт.укр/веб" target="_blank">Web-technologies</a>" nomination.
+- title: 2nd
+  description: Place in "Google Code-In" 2019 by Wikimedia Foundation
 
-- label: Spring 2019
-  text: Second win in all-ukrainian contest "<a href="https://italent.org.ua/" target="_blank">iTalent</a>" in the "Soft&Mobile" nomination.
-
-- label: Winter 2019-2020
-  text: Third win in all-ukrainian contest "<a href="https://italent.org.ua/" target="_blank">iTalent</a>" in the "WEB Application" nomination.<br/>Runner Up by <a href="https://codein.withgoogle.com/organizations/wikimedia/" target="_blank">Wikimedia</a> in <a href="https://codein.withgoogle.com/" target="_blank">Google Code-In</a> 2019.
+- title: 1st
+  description: Place in all-ukrainian Internet Olympiad in Information Technology in the "Web-technologies" nomination

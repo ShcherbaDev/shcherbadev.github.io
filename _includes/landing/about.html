@@ -1,19 +1,16 @@
-<section class="about" id="about">
-    <div class="container h-100">
-        <div class="row">
-            <div class="col-12 col-lg-6" itemscope itemtype="http://schema.org/Person">
-                <h1>About me</h1>
-                <p itemprop="description">{{ site.data.about-me }}</p>
-            </div>
-            <div class="col-12 col-lg-6">
-                <a href="https://www.facebook.com/permalink.php?story_fbid=1016356312069466&id=100010853207140" class="rounded" target="_blank">
-                    <img
-                        src="https://scontent.fiev27-1.fna.fbcdn.net/v/t1.0-9/84146663_1016355838736180_5654521141801254912_o.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=N3LHxqhLcsMAX8o9LVG&_nc_ht=scontent.fiev27-1.fna&oh=09529cae45b7dda82d866141cedd5998&oe=5EDCED4D"
-                        alt="Photo of me with GCI Runner Up certificate"
-                        class="shadow-sm p-2 rounded img-responsive">
-                </a>
-            </div>
+{% include landing/section-template/section-header.html className="about" id="about" name="About me" %}
+    <div class="row">
+        <div class="col-12 col-lg-6" itemscope itemtype="http://schema.org/Person">
+            <p itemprop="description">{{ site.data.about-me }}</p>
         </div>
-        <a href="#projects" class="btn btn-block btn-primary projects-link">Check out my projects!</a>
+        <div class="col-12 col-lg-6">
+            <a href="https://www.facebook.com/permalink.php?story_fbid=1016356312069466&id=100010853207140" class="rounded" target="_blank">
+                <img
+                    src="/images/me.jpg"
+                    alt="Photo of me with GCI Runner Up certificate"
+                    class="shadow-sm p-2 rounded img-responsive">
+            </a>
+        </div>
     </div>
-</section>
+    <a href="#projects" class="btn btn-block btn-primary projects-link">Check out my projects!</a>
+{% include landing/section-template/section-footer.html %}

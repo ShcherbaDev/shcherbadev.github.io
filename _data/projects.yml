@@ -15,3 +15,9 @@
   description: <a href="https://en.wikipedia.org/wiki/M3U" target="_blank">M3U</a> file editor
   link: http://github.com/ShcherbaDev/IPTVPLC
   previewImage: /images/iptvplc_logo.png
+
+- name: Nexap
+  altName: Nexap
+  description: Web service for creating video/audio conferences
+  link: http://github.com/Nexap
+  previewImage: https://raw.githubusercontent.com/Nexap/nexap-logo-css-animation/master/assets/images/logo-square.svg

@@ -1,5 +1,5 @@
 section {
-	padding: calc(2% + 56px) 0;
+	margin: calc(1% + 56px) 0;
 	position: relative;
 }
 
@@ -91,23 +91,23 @@ a.projects-link {
 }
 
 #project-list .card {
-	height: 100%;
+	min-height: 408px;
 }
 
 #project-list .card p.card-text {
-	height: 34.5%;
+	min-height: 73px;
 	overflow-y: auto;
 }
 
 .project-card img.card-img-top {
 	height: 200px;
 	object-fit: contain;
-	padding: 10px;
+	padding: 20px;
 	transition: .5s all ease-in-out;
 }
 
 .project-card:hover img {
-	padding: 5px;
+	padding: 15px;
 }
 
 section.blog {
@@ -128,6 +128,7 @@ section.contact {
     background-color: rgb(54, 31, 133);
 	background-image: linear-gradient(180deg, rgb(54, 31, 133), rgb(63, 49, 142));
 	padding: 2.5rem 0;
+	margin: 8rem 0 0 0;
 }
 
 section.contact::before {

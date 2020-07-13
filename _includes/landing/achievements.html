@@ -1,16 +1,12 @@
-{% include landing/section-template/section-header.html className="achievements" id="achievements" name="Achievements" %}
-    <div class="timeline">
-        <div class="timeline__wrap">
-            <div class="timeline__items">
-                {% for achievement in site.data.achievements %}
-                    <div class="timeline__item">
-                        <div class="timeline__content" itemscope itemtype="http://schema.org/Person">
-                            <h2>{{ achievement.label }}</h2>
-                            <p itemprop="award">{{ achievement.text }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
+{% include landing/section-template/section-header.html className="achievements asd" id="achievements" name="My achievements" %}
+    <div class="row justify-content-around">
+        {% for achievement in site.data.achievements %}
+            <div class="col-4 my-3">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center p-2 border" style="height: 230px;">
+                    <h3 class="display-4 mb-2">{{ achievement.title }}</h3>
+                    <p class="mb-0">{{ achievement.description }}</p>
+                </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
 {% include landing/section-template/section-footer.html %}
