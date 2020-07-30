@@ -1,11 +1,11 @@
 <header>
-    <div class="container h-100">
-        <div class="row align-items-center justify-content-md-center h-100 me-header" itemscope itemtype="http://schema.org/Person">
-            <div class="col-4 avatar">
+    <div class="container">
+        <div class="me-header" itemscope itemtype="http://schema.org/Person">
+            <div class="avatar">
                 <img src="/images/avatar.jpg" alt="My avatar" class="img-fluid rounded-circle" itemprop="image">
             </div>
-            <div class="col-6 info">
-                <h1 class="display-4 mb-0" itemprop="name">Andrey Shcherbakov</h1>
+            <div class="info">
+                <h1 class="display-6 mb-0" itemprop="name">Andrey Shcherbakov</h1>
                 <div class="anim">
                     {% for phrase in site.data.header-phrases %}
                         <span itemprop="jobTitle">{{ phrase }}</span>

@@ -11,9 +11,11 @@ GEM
     eventmachine (1.2.7)
     eventmachine (1.2.7-java)
     eventmachine (1.2.7-x64-mingw32)
+    eventmachine (1.2.7-x86-mingw32)
     ffi (1.11.3)
     ffi (1.11.3-java)
     ffi (1.11.3-x64-mingw32)
+    ffi (1.11.3-x86-mingw32)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
     http_parser.rb (0.6.0-java)
@@ -69,6 +71,7 @@ PLATFORMS
   java
   ruby
   x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
   jekyll-feed (~> 0.12)

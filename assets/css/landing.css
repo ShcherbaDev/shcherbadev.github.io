@@ -4,11 +4,25 @@ section {
 }
 
 header {
-	height: 100vh;
+	min-height: 100vh;
 	background: linear-gradient(45deg, rgba(38, 35, 129, .96), rgba(56, 53, 113, .96));
 	color: #fff;
 	position: relative;
 	overflow: hidden;
+	display: flex;
+}
+
+header > .container {
+	margin: auto;
+}
+
+header .me-header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 
 header .anim span {
@@ -18,14 +32,19 @@ header .anim span {
 	overflow: hidden;
 }
 
+header .avatar {
+	width: 220px;
+	margin-right: 50px;
+}
+
 header .avatar > img {
 	position: relative;
-	max-width: 90%;
 	box-shadow: 0 3px 5px rgba(0, 0, 0, .33);
 	animation: firstSlideLeftPartAppear 1.5s ease-in-out;
 }
 
 header .info {
+	width: 420px;
 	animation: firstSlideRightPartAppear 1.5s ease-in-out;
 }
 
@@ -76,6 +95,42 @@ header a:hover::after {
 	opacity: 1;
 	top: 0;
 	right: 28.5px;
+}
+
+@media screen and (max-width: 380px) {
+	header .info h1 {
+		font-size: 9vw;
+	}	
+
+	header .anim span {
+		font-size: 6vw;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header .me-header {
+		flex-direction: column !important;
+		padding: 5px 0;
+	}
+	
+	header .avatar {
+		width: 160px;
+		margin-right: 0;
+	}
+	
+	header .info {
+		margin-top: 10px;
+		text-align: center;
+	}
+	
+	header .info h1 {
+		font-size: 36px;
+	}
+	
+	header a {
+		display: block;
+		width: 100%;
+	}
 }
 
 .skill:not(:first-child) {
