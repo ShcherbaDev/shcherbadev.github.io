@@ -1,17 +1,26 @@
-- name: School website
-  altName: Mriya school class website
-  description: My first project ever. Website of my 5-9 school classes "Mriya".<br/><i>(Ukrainian only!)</i>
-  link: http://mriyaclass.in.ua/
-  previewImage: http://mriyaclass.in.ua/templates/mriya_fixed/images/logo.png
-
-- name: RPGinia
-  altName: RPGinia game engine
-  description: Simple Javascript 2D game engine
-  link: https://github.com/ShcherbaDev/RPGinia/
-  previewImage: /images/rpginia_logo_mini.png
+- name: SpeechFeed
+  link: https://speechfeed.net
+  description: Social network that uses audio messages instead of text
+  logo: /assets/images/my-projects/speechfeed.svg
+  achievement: 3rd place in the <abbr title="Junior Academy of Sciences of Ukraine">JASU</abbr> Competition 2020-2021
+  containerClassNames: bg-blue-800
 
 - name: IPTV Playlist Constructor
-  altName: IPTV Playlist Constructor
-  description: <a href="https://en.wikipedia.org/wiki/M3U" target="_blank">M3U</a> file editor
-  link: http://github.com/ShcherbaDev/IPTVPLC
-  previewImage: /images/iptvplc_logo.png
+  link: https://github.com/ShcherbaDev/iptvplc
+  description: Web application for editing <a href="https://en.wikipedia.org/wiki/M3U" target="_blank">M3U and M3U8</a> files
+  logo: /assets/images/my-projects/iptvplc.svg
+  achievement: 1st place in the 6nd season of iTalent contest
+  containerClassNames: bg-green
+
+- name: RPGinia
+  link: https://github.com/ShcherbaDev/RPGinia
+  description: Simple Javascript 2D game engine with built-in map editor
+  logo: /assets/images/my-projects/rpginia.png
+  achievement: 1st place in the 5th season of iTalent contest
+  containerClassNames: bg-red
+
+- name: My school classroom's website
+  description: My first project ever. Website for 5-9 grades of my classroom "Mriya"
+  logo: /assets/images/my-projects/mriyaclass-transparent.svg
+  achievement: 1st place in the 2nd season of iTalent contest
+  containerClassNames: bg-yellow

@@ -1,37 +1,24 @@
 ---
 permalink: /404.html
-layout: default
+layout: page
+include_navbar: false
 ---
 
-<style type="text/css" media="screen">
-	.container {
-		display: flex;
-		height: 85vh;
-		align-items: center;
-		justify-content: center;
-	}
-	h1 {
-		font-size: 5em;
-		margin-bottom: 0;
-		line-height: 85px;
-	}
-	footer {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
+<style>
+	p {
+		font-size: 26px;
 	}
 </style>
 
-<div class="container">
-	<div class="row w-100 justify-content-center">
-		<div class="col-lg-6 col-12 d-flex flex-column align-items-center justify-content-center">
-			<h1>404</h1>
-			<h2>Page not found</h2>
-			<a href="/">Go back to the main page</a>
-		</div>
-		<div class="col-lg-6 d-none d-lg-block text-center">
-			<img src="https://art.pixilart.com/e87170a375e6434.gif" alt="Sr.Pelo">
-		</div>
-	</div>
-</div>
+<p>
+	<span class="color-accent">root@admin-pc</span>:~$ ping <span id="current-url"></span><br/>
+	<span class="color-red">404 error: Page not found!</span>
+</p>
+<p class="mt-5">
+	<span class="color-accent">root@admin-pc</span>:~$ help<br/>
+	Go back to <a href="/">main</a> page
+</p>
+
+<script>
+	document.getElementById('current-url').innerHTML = window.location.href;
+</script>

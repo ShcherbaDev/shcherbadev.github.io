@@ -1,8 +1,8 @@
-- title: 3
-  description: Victories in all-ukrainian contest "iTalent"
+- title: iTalent
+  description: All-Ukrainian contest where I got 1st place in 2nd, 5th and 6th seasons in "Web Application" and "Soft&Mobile" nominations
 
-- title: 2nd
-  description: Place in "Google Code-In" 2019 by Wikimedia Foundation
+- title: Google Code-in
+  description: "Runner Up by Wikimedia Foundation in 2019<br/>(Nickname: Crutishnyk)"
 
-- title: 1st
-  description: Place in all-ukrainian Internet Olympiad in Information Technology in the "Web-technologies" nomination
+- title: <abbr title="Junior Academy of Sciences of Ukraine">JASU</abbr> Competition
+  description: 3rd place in the national contest in 2020

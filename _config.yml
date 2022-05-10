@@ -1,12 +1,25 @@
-title: Andrey Shcherbakov website
+title: Andrii Shcherbakov
 email: andrey.shcherbakov05@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Landing page of Andrey Shcherbakov.
-  There are also my blog posts,
-  projects etc.
+  Landing page of Andrii Shcherbakov.
+  I write here blog posts, projects and achievements
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://shcherbadev.github.io # the base hostname & protocol for your site, e.g. http://example.com
-permalink: /blog/:year/:month/:day/:title
+url: "https://shcherbadev.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+contact_form_url: "https://getform.io/f/afefe260-b2b6-4bd0-a12d-5985f4563f96"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
 
 exclude:
   - run.sh
+  - shcherbadev.github.io new.fig
+
+defaults:
+  - 
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      include_navbar: true

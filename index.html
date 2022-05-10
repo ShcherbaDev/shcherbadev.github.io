@@ -1,11 +1,173 @@
 ---
-layout: blank
-title: Andrey Shcherbakov
+title: Andrii Shcherbakov
+layout: home
 ---
-{% include landing/header.html %}
-{% include fixed_header.html %}
-{% include landing/about.html %}
-{% include landing/project_list.html %}
-{% include landing/achievements.html %}
-<!-- {% include landing/blog.html %} - no ready blog posts yet so I'm commenting this section -->
-{% include landing/contact.html %}
+
+{% include navbar.html %}
+
+<header>
+	<div class="container">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-12 col-lg-5 mt-4 mt-lg-0 order-1 order-lg-0 text-center text-lg-start">
+				<h1 class="mb-2">{{ page.title }}</h1>
+				<p class="h4 color-accent">Fullstack web developer</p>
+			</div>
+			<div class="col-6 col-lg-4">
+				<img
+					src="/assets/images/header-profile.png"
+					alt="My Photo on the background of Taras Shevchenko"
+					class="img-fluid rounded shadow"
+				>
+			</div>
+		</div>
+	</div>
+</header>
+<section id="about" class="about-me">
+	<h1 class="text-center mb-5">About Me</h1>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-xl-6 programs-i-use d-flex bg-gray-800">
+				<object data="/assets/images/programs-i-use.svg" type="image/svg+xml" class="m-auto" id="programsIUse">
+					<img src="/assets/images/programs-i-use.png" alt="Programs I use" class="m-auto">
+				</object>
+			</div>
+			<div class="col-12 col-xl-6 d-flex align-items-center py-5 py-xl-0">
+				<div class="container">
+					<h2>I love my work</h2>
+					<p>
+						My name is Andrii, but most people call me "Shcherba" or "Crutishnyk". I'm from Ukraine.<br/>
+						I like programming and I have achieved a lot in a short time.<br/>
+						I'm focused on Web Development but can also make desktop/mobile apps and create videos.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="achievements" class="my-achievements">
+	<h1 class="text-center my-5">My Achievements</h1>
+
+	<div class="container">
+		<div class="row g-4">
+			{% for achievement in site.data.achievements %}
+			<div class="col-12 col-xl">
+				<div class="card rounded shadow">
+					<h2>{{ achievement.title }}</h2>
+					<p>{{ achievement.description }}</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section id="projects" class="my-projects">
+	<h1 class="text-center my-5">My Projects</h1>
+
+	<div class="projects-container">
+		{% for project in site.data.projects %}
+		<div class="project py-5 {{ project.containerClassNames }}">
+			<div class="container-fluid container-lg">
+				<div class="row">
+					<div class="col-12 col-lg-3 project__logo">
+						<img src="{{ project.logo }}" alt="{{ project.name }} logo" class="img-fluid text-center pb-4 p-lg-4" />
+					</div>
+					<div class="col px-5 px-lg-0 project__description d-flex flex-column justify-content-center text-center text-lg-start">
+						<h2 {% if project.achievement %}class="mb-0"{% endif %}>
+							{% if project.link %}
+							<a href="{{ project.link }}" target="_blank">{{ project.name }}</a>
+							{% else %}
+							{{ project.name }}
+							{% endif %}
+						</h2>
+						{% if project.achievement %}
+							<i class="project__winner mb-3">
+								<i class="fa-solid fa-award"></i> {{ project.achievement }}
+							</i>
+						{% endif %}
+						<p>{{ project.description }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+		<div class="project py-5 bg-gray-800">
+			<div class="container-fluid container-lg">
+				<div class="row">
+					<div class="col-12 col-lg-3 project__logo">
+						<img src="/assets/images/logos/github-icon.svg" alt="GitHub logo" class="img-fluid text-center pb-4 p-lg-4">
+					</div>
+					<div class="col px-5 px-lg-0 project__description d-flex flex-column justify-content-center text-center text-lg-start">
+						<p class="h2">Check out my other projects on <a href="https://github.com/ShcherbaDev" target="_blank">GitHub</a>!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contacts" class="contacts py-5">
+	<h1 class="text-center mb-5">Contact Me</h1>
+
+	<div class="container">
+		<div class="card rounded shadow">
+			<div class="container">
+				<div class="row gx-5">
+					<div class="col-12 col-lg">
+						<h2>Write a message</h2>
+
+						<form action="{{ site.contact_form_url }}" method="post" accept-charset="UTF-8">
+							<div class="row gy-3">
+								<div class="col-12 col-md-6">
+									<div class="form-group">
+										<label for="email-field">Your email:</label>
+										<input id="email-field" name="email" type="email">
+									</div>
+								</div>
+								<div class="col-12 col-md-6">
+									<div class="form-group">
+										<label for="name-field">Your name:</label>
+										<input type="text" name="name" id="name-field">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="subject-field">Subject:</label>
+										<input type="text" name="subject" id="subject-field">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="message-field">Text:</label>
+										<textarea name="text" id="message-field" rows="10" style="resize: none"></textarea>
+									</div>
+								</div>
+								<div class="col-12">
+									<button type="submit">Submit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-12 col-lg pt-4 pt-lg-0">
+						<h2>Find me on other platforms</h2>
+
+						<ul class="fa-ul" style="--fa-li-margin: 2.4em; --fa-li-width: 3em">
+							{% for contact in site.data.contacts %}
+							<li>
+								<a href="{{ contact.link }}" target="_blank">
+									<span class=" fa-li">
+										<i class="{{ contact.icon }} fa-lg"></i>
+									</span>
+									{{ contact.text }}
+								</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

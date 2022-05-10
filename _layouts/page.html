@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ page.title }} - {{ site.title }}</title>
+
+	<link rel="stylesheet" href="/assets/fonts/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="/assets/fonts/fontawesome/css/solid.min.css">
+	<link rel="stylesheet" href="/assets/fonts/fontawesome/css/brands.min.css">
+	<link rel="stylesheet" href="/assets/styles/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="/assets/styles/bootstrap-utilities.min.css">
+	<link rel="stylesheet" href="/assets/styles/main.css">
+</head>
+<body>
+	{% if page.include_navbar %}{% include navbar.html %}{% endif %}
+
+	<div class="container" style="margin-top: 5rem">
+		{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+		{{ content }}
+	</div>
+
+	<script src="/assets/scripts/main.js"></script>
+</body>
+</html>

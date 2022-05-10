@@ -1,0 +1,8 @@
+<nav>
+	<button class="d-inline-block d-md-none w-auto px-3 mx-3 my-2"><i class="fa-solid fa-bars"></i></button>
+	<div class="nav-content d-flex flex-column flex-md-row justify-content-center px-3">
+		{% for navbar-item in site.data.navbar-links %}
+		<a href="{{ navbar-item.link }}">{{ navbar-item.text }}</a>
+		{% endfor %}
+	</div>
+</nav>
