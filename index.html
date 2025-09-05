@@ -1,15 +1,35 @@
----
-title: Andrii Shcherbakov
-layout: home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Andrii Shcherbakov</title>
 
-{% include navbar.html %}
+	<link rel="stylesheet" href="/assets/fonts/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="/assets/fonts/fontawesome/css/solid.min.css">
+	<link rel="stylesheet" href="/assets/fonts/fontawesome/css/brands.min.css">
+	<link rel="stylesheet" href="/assets/styles/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="/assets/styles/bootstrap-utilities.min.css">
+	<link rel="stylesheet" href="/assets/styles/main.css">
+</head>
+<body>
+	<nav>
+	<button class="d-inline-block d-md-none w-auto px-3 mx-3 my-2"><i class="fa-solid fa-bars"></i></button>
+	<div class="nav-content d-flex flex-column flex-md-row justify-content-center px-3">
+		<a href="/#about">About Me</a>		
+		<a href="/#achievements">Achievements</a>
+		<a href="/#projects">Projects</a>
+		<a href="/#contacts">Contacts</a>
+	</div>
+</nav>
+
 
 <header>
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-12 col-lg-5 mt-4 mt-lg-0 order-1 order-lg-0 text-center text-lg-start">
-				<h1 class="mb-2">{{ page.title }}</h1>
+				<h1 class="mb-2">Andrii Shcherbakov</h1>
 				<p class="h4 color-accent">Fullstack web developer</p>
 			</div>
 			<div class="col-6 col-lg-4">
@@ -51,14 +71,28 @@ layout: home
 
 	<div class="container">
 		<div class="row g-4">
-			{% for achievement in site.data.achievements %}
+			
 			<div class="col-12 col-xl">
 				<div class="card rounded shadow">
-					<h2>{{ achievement.title }}</h2>
-					<p>{{ achievement.description }}</p>
+					<h2>iTalent</h2>
+					<p>All-Ukrainian contest where I got 1st place in 2nd, 5th and 6th seasons in "Web Application" and "Soft&Mobile" nominations</p>
 				</div>
 			</div>
-			{% endfor %}
+			
+			<div class="col-12 col-xl">
+				<div class="card rounded shadow">
+					<h2>Google Code-in</h2>
+					<p>Runner Up by Wikimedia Foundation in 2019<br/>(Nickname: Crutishnyk)</p>
+				</div>
+			</div>
+			
+			<div class="col-12 col-xl">
+				<div class="card rounded shadow">
+					<h2><abbr title="Junior Academy of Sciences of Ukraine">JASU</abbr> Competition</h2>
+					<p>3rd place in the national contest in 2020</p>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </section>
@@ -67,32 +101,99 @@ layout: home
 	<h1 class="text-center my-5">My Projects</h1>
 
 	<div class="projects-container">
-		{% for project in site.data.projects %}
-		<div class="project py-5 {{ project.containerClassNames }}">
+		
+		<div class="project py-5 bg-blue-800">
 			<div class="container-fluid container-lg">
 				<div class="row">
 					<div class="col-12 col-lg-3 project__logo">
-						<img src="{{ project.logo }}" alt="{{ project.name }} logo" class="img-fluid text-center pb-4 p-lg-4" />
+						<img src="/assets/images/my-projects/speechfeed.svg" alt="SpeechFeed logo" class="img-fluid text-center pb-4 p-lg-4" />
 					</div>
 					<div class="col px-5 px-lg-0 project__description d-flex flex-column justify-content-center text-center text-lg-start">
-						<h2 {% if project.achievement %}class="mb-0"{% endif %}>
-							{% if project.link %}
-							<a href="{{ project.link }}" target="_blank">{{ project.name }}</a>
-							{% else %}
-							{{ project.name }}
-							{% endif %}
+						<h2 class="mb-0">
+							
+							<a href="https://speechfeed.net" target="_blank">SpeechFeed</a>
+							
 						</h2>
-						{% if project.achievement %}
+						
 							<i class="project__winner mb-3">
-								<i class="fa-solid fa-award"></i> {{ project.achievement }}
+								<i class="fa-solid fa-award"></i> 3rd place in the <abbr title="Junior Academy of Sciences of Ukraine">JASU</abbr> Competition 2020-2021
 							</i>
-						{% endif %}
-						<p>{{ project.description }}</p>
+						
+						<p>Social network that uses audio messages instead of text</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		{% endfor %}
+		
+		<div class="project py-5 bg-green">
+			<div class="container-fluid container-lg">
+				<div class="row">
+					<div class="col-12 col-lg-3 project__logo">
+						<img src="/assets/images/my-projects/iptvplc.svg" alt="IPTV Playlist Constructor logo" class="img-fluid text-center pb-4 p-lg-4" />
+					</div>
+					<div class="col px-5 px-lg-0 project__description d-flex flex-column justify-content-center text-center text-lg-start">
+						<h2 class="mb-0">
+							
+							<a href="https://github.com/ShcherbaDev/iptvplc" target="_blank">IPTV Playlist Constructor</a>
+							
+						</h2>
+						
+							<i class="project__winner mb-3">
+								<i class="fa-solid fa-award"></i> 1st place in the 6nd season of iTalent contest
+							</i>
+						
+						<p>Web application for editing <a href="https://en.wikipedia.org/wiki/M3U" target="_blank">M3U and M3U8</a> files</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="project py-5 bg-red">
+			<div class="container-fluid container-lg">
+				<div class="row">
+					<div class="col-12 col-lg-3 project__logo">
+						<img src="/assets/images/my-projects/rpginia.png" alt="RPGinia logo" class="img-fluid text-center pb-4 p-lg-4" />
+					</div>
+					<div class="col px-5 px-lg-0 project__description d-flex flex-column justify-content-center text-center text-lg-start">
+						<h2 class="mb-0">
+							
+							<a href="https://github.com/ShcherbaDev/RPGinia" target="_blank">RPGinia</a>
+							
+						</h2>
+						
+							<i class="project__winner mb-3">
+								<i class="fa-solid fa-award"></i> 1st place in the 5th season of iTalent contest
+							</i>
+						
+						<p>Simple Javascript 2D game engine with built-in map editor</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="project py-5 bg-yellow">
+			<div class="container-fluid container-lg">
+				<div class="row">
+					<div class="col-12 col-lg-3 project__logo">
+						<img src="/assets/images/my-projects/mriyaclass-transparent.svg" alt="My school classroom's website logo" class="img-fluid text-center pb-4 p-lg-4" />
+					</div>
+					<div class="col px-5 px-lg-0 project__description d-flex flex-column justify-content-center text-center text-lg-start">
+						<h2 class="mb-0">
+							
+							My school classroom's website
+							
+						</h2>
+						
+							<i class="project__winner mb-3">
+								<i class="fa-solid fa-award"></i> 1st place in the 2nd season of iTalent contest
+							</i>
+						
+						<p>My first project ever. Website for 5-9 grades of my classroom "Mriya"</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<div class="project py-5 bg-gray-800">
 			<div class="container-fluid container-lg">
 				<div class="row">
@@ -118,7 +219,7 @@ layout: home
 					<div class="col-12 col-lg">
 						<h2>Write a message</h2>
 
-						<form action="{{ site.contact_form_url }}" method="post" accept-charset="UTF-8">
+						<form action="https://getform.io/f/afefe260-b2b6-4bd0-a12d-5985f4563f96" method="post" accept-charset="UTF-8">
 							<div class="row gy-3">
 								<div class="col-12 col-md-6">
 									<div class="form-group">
@@ -154,16 +255,52 @@ layout: home
 						<h2>Find me on other platforms</h2>
 
 						<ul class="fa-ul" style="--fa-li-margin: 2.4em; --fa-li-width: 3em">
-							{% for contact in site.data.contacts %}
+							
 							<li>
-								<a href="{{ contact.link }}" target="_blank">
+								<a href="https://github.com/ShcherbaDev" target="_blank">
 									<span class=" fa-li">
-										<i class="{{ contact.icon }} fa-lg"></i>
+										<i class="fa-brands fa-github fa-lg"></i>
 									</span>
-									{{ contact.text }}
+									ShcherbaDev
 								</a>
 							</li>
-							{% endfor %}
+							
+							<li>
+								<a href="https://twitter.com/andrii_shcherba" target="_blank">
+									<span class=" fa-li">
+										<i class="fa-brands fa-twitter fa-lg"></i>
+									</span>
+									@andrii_shcherba
+								</a>
+							</li>
+							
+							<li>
+								<a href="https://facebook.com/crutishnyk" target="_blank">
+									<span class=" fa-li">
+										<i class="fa-brands fa-facebook-f fa-lg"></i>
+									</span>
+									Andrii Shcherbakov
+								</a>
+							</li>
+							
+							<li>
+								<a href="https://youtube.com/channel/UCTvg0RRrmjefDzACM5QGuVA" target="_blank">
+									<span class=" fa-li">
+										<i class="fa-brands fa-youtube fa-lg"></i>
+									</span>
+									Andrii Shcherbakov
+								</a>
+							</li>
+							
+							<li>
+								<a href="mailto:andrey.shcherbakov05@gmail.com" target="_blank">
+									<span class=" fa-li">
+										<i class="fa-solid fa-envelope fa-lg"></i>
+									</span>
+									andrey.shcherbakov05@gmail.com
+								</a>
+							</li>
+							
 						</ul>
 					</div>
 				</div>
@@ -171,3 +308,8 @@ layout: home
 		</div>
 	</div>
 </section>
+
+
+	<script src="/assets/scripts/main.js"></script>
+</body>
+</html>

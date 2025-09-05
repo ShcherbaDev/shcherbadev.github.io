@@ -23,8 +23,7 @@ function shake(e, distance, time) {
 
 		let x = distance * Math.sin(fraction * 4 * Math.PI);
 		let y = distance * Math.cos(fraction * 3 * Math.PI);
-		e.style.left = x + "px";
-		e.style.top = y + "px";
+		e.setAttribute('transform', `translate(${x},${y})`);
 
 		requestAnimationFrame(animate);
 	}
