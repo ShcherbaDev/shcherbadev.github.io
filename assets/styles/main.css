@@ -4,6 +4,7 @@
 	--main-bg-color: #3B4252;
 	--gray-900-color: #4C566A;
 	--gray-800-color: #434C5E;
+	--gray-700-color: #2b313c;
 	--white-900-color: #ECEFF4;
 	--white-800-color: #D8DEE9;
 	--red-900-color: #BF616A;
@@ -128,7 +129,7 @@ button {
 	background-color: var(--accent-color);
 	border: 1px solid var(--blue-800-color);
 	border-radius: var(--controls-border-radius);
-	color: var(--gray-800-color);
+	color: var(--gray-700-color);
 	cursor: pointer;
 	font-family: "JetBrains Mono Medium";
 }

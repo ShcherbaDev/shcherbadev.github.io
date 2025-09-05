@@ -1,0 +1,75 @@
+# Simple workflow for deploying static content to GitHub Pages with optimization
+name: Deploy static content to Pages
+
+on:
+    # Runs on pushes targeting the default branch
+    push:
+        branches: ['master']
+
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+    group: 'pages'
+    cancel-in-progress: false
+
+jobs:
+    # Single deploy job since we're just deploying
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            # Set up Node.js for optimization tools
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+
+            # Install CLI tools for minification and compression
+            - name: Install optimization tools
+              run: npm install -g terser clean-css-cli svgo-cli imagemin-cli imagemin-mozjpeg imagemin-pngquant
+
+            # Minify JS files
+            - name: Minify JS
+              run: find . -type f -name '*.js' ! -name '*.min.js' -exec terser --compress --mangle -o {} -- {} \;
+
+            # Minify CSS files
+            - name: Minify CSS
+              run: find . -type f -name '*.css' ! -name '*.min.css' -exec cleancss -o {} {} \;
+
+            # Minify SVG files
+            - name: Minify SVG
+              run: find . -type f -name '*.svg' -exec svgo --quiet {} \;
+
+            # Compress images (jpg, jpeg, png) in-place
+            - name: Compress Images
+              run: |
+                  for file in $(find . -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \)); do
+                    imagemin "$file" --plugin=mozjpeg --plugin=pngquant > "$file.tmp" && mv "$file.tmp" "$file"
+                  done
+
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  # Upload the entire repository (now optimized)
+                  path: '.'
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
