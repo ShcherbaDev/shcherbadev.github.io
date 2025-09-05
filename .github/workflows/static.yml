@@ -40,7 +40,7 @@ jobs:
 
             # Install CLI tools for minification and compression
             - name: Install optimization tools
-              run: npm install -g terser clean-css-cli svgo-cli imagemin-cli imagemin-mozjpeg imagemin-pngquant
+              run: npm install -g terser clean-css-cli svgo-cli imagemin-cli imagemin-mozjpeg imagemin-pngquant imagemin-webp imagemin-avif
 
             # Minify JS files
             - name: Minify JS
@@ -59,6 +59,32 @@ jobs:
               run: |
                   for file in $(find . -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \)); do
                     imagemin "$file" --plugin=mozjpeg --plugin=pngquant > "$file.tmp" && mv "$file.tmp" "$file"
+                  done
+
+            # Convert images to WebP and AVIF
+            - name: Convert Images to WebP and AVIF
+              run: |
+                  for file in $(find . -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \)); do
+                    # Generate WebP
+                    imagemin "$file" --plugin=webp --out-dir="$(dirname "$file")" --out-suffix=".webp"
+                    # Generate AVIF
+                    imagemin "$file" --plugin=avif --out-dir="$(dirname "$file")" --out-suffix=".avif"
+                  done
+
+            # Backup original HTML and convert <img> to <picture>
+            - name: Convert <img> to <picture>
+              run: |
+                  # Backup original HTML files
+                  find . -type f -name '*.html' -exec cp {} {}.bak \;
+                  # Replace <img> with <picture> for each image
+                  for img in $(find . -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \)); do
+                    base_name=$(basename "$img")
+                    dir_name=$(dirname "$img")
+                    file_name="${base_name%.*}"
+                    # Construct the <picture> replacement
+                    picture_tag="<picture><source type='image/avif' srcset='${file_name}.avif'><source type='image/webp' srcset='${file_name}.webp'><img src='${base_name}' alt=''></picture>"
+                    # Replace <img src="..." alt="..."> with <picture> structure
+                    find . -type f -name '*.html' -exec sed -i "s|<img src=\"${base_name}\" alt=\"[^\"]*\"|>${picture_tag}|g" {} \;
                   done
 
             - name: Setup Pages

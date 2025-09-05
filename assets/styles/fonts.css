@@ -1,9 +1,11 @@
 @font-face {
 	font-family: "JetBrains Mono Regular";
 	src: url("/assets/fonts/JetBrainsMono/JetBrainsMono-Regular.ttf");
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "JetBrains Mono Medium";
 	src: url("/assets/fonts/JetBrainsMono/JetBrainsMono-Medium.ttf");
+	font-display: swap;
 }
