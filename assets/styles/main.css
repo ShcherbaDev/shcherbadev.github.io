@@ -38,7 +38,7 @@ html {
 
 body {
 	background-color: var(--main-bg-color);
-	font-family: "JetBrains Mono", Arial, Helvetica, sans-serif;
+	font-family: "JetBrains Mono", Consolas, Arial, Helvetica, sans-serif;
 	color: var(--white-800-color);
 	font-size: 18px;
 }
@@ -241,10 +241,25 @@ section.my-achievements .card {
 	filter: brightness(0) invert(0.3);
 }
 
-section.contacts ul a {
+/* -------------------- */
+
+ul.socials {
+	float: left;
+	list-style: none;
+}
+
+ul.socials a {
+	display: flex;
+	align-items: center;
 	text-decoration: none;
 }
 
-section.contacts ul a:hover {
+ul.socials a:hover {
 	text-decoration: underline;
+}
+
+ul.socials a > img {
+	width: 22px;
+	margin-right: 20px;
+	filter: invert(1) brightness(100);
 }
