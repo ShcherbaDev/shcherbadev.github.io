@@ -1,14 +1,4 @@
 @font-face {
-	font-family: "Fira Code Regular";
-	src: url("/assets/fonts/FiraCode/FiraCode-Regular.ttf");
-}
-
-@font-face {
-	font-family: "Fira Code Light";
-	src: url("/assets/fonts/FiraCode/FiraCode-Light.ttf");
-}
-
-@font-face {
 	font-family: "JetBrains Mono Regular";
 	src: url("/assets/fonts/JetBrainsMono/JetBrainsMono-Regular.ttf");
 }
