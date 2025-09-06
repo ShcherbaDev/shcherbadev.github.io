@@ -227,6 +227,7 @@ section.my-achievements .card {
 
 .project__logo {
 	display: flex;
+	justify-content: center;
 }
 
 .project__logo img {

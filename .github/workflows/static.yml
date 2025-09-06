@@ -40,7 +40,7 @@ jobs:
 
             # Install CLI tools for minification and compression
             - name: Install optimization tools
-              run: npm install -g terser clean-css-cli svgo-cli imagemin-cli imagemin-mozjpeg imagemin-pngquant imagemin-webp imagemin-avif
+              run: npm install -g terser clean-css-cli imagemin-cli imagemin-mozjpeg imagemin-pngquant imagemin-webp imagemin-avif
 
             # Minify JS files
             - name: Minify JS
@@ -49,10 +49,6 @@ jobs:
             # Minify CSS files
             - name: Minify CSS
               run: find . -type f -name '*.css' ! -name '*.min.css' -exec cleancss -o {} {} \;
-
-            # Minify SVG files
-            - name: Minify SVG
-              run: find . -type f -name '*.svg' -exec svgo --quiet {} \;
 
             # Compress images (jpg, jpeg, png) in-place
             - name: Compress Images
