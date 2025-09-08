@@ -36,6 +36,6 @@ const randomNumber = (min, max) => Math.floor((Math.random() * (max - min + 1)) 
 window.onload = () => {
 	const programsIUseSvg = document.getElementById('programsIUse').contentDocument;
 	programsIUseSvg.querySelectorAll('svg > g').forEach((it) => {
-		shake(it, randomNumber(1, 3), randomNumber(2000, 5000));
+		shake(it, randomNumber(1, 2), randomNumber(4000, 5000));
 	});
 }
